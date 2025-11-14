@@ -14,7 +14,7 @@ const StrickyNavSingle: React.FC = () => {
     if (!context) {
         throw new Error("Context null")
     }
-    const { setIsMobileOpen, setIsSearch, scrollToSection, activeSection } = context;  
+    const { setIsMobileOpen, setIsSearch, scrollToSection, activeSection } = context;
     const handleSearch = (): void => {
         setIsSearch((prev: boolean) => !prev);
     };
@@ -160,14 +160,15 @@ const StrickyNavSingle: React.FC = () => {
                                     </li>
                                     {
                                         navItems.map((item: NavItem) => <li className={`${activeSection === item?.linkId ? 'current' : ''}`} key={item?.linkId}>
-                                            <a
-
-                                                href={`#${item?.linkId}`}
-                                                data-section={item?.linkId}
-                                                onClick={() => scrollToSection(`#${item?.linkId}`)}
+                                            <Link
+                                                href={`#${item.linkId}`}
+                                                onClick={(e) => {
+                                                    e.preventDefault();
+                                                    scrollToSection(item.linkId);
+                                                }}
                                             >
-                                                {item?.navItem}
-                                            </a>
+                                                {item.navItem}
+                                            </Link>
                                         </li>)
                                     }
                                 </ul>

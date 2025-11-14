@@ -198,14 +198,15 @@ const HeaderSingle: React.FC = () => {
                                     </li>
                                     {
                                         navItems.map((item: NavItem) => <li key={item?.linkId}>
-                                            <a
-
-                                                href={`#${item?.linkId}`}
-                                                data-section={item?.linkId}
-                                                onClick={() => scrollToSection(`#${item?.linkId}`)}
+                                            <Link
+                                                href={`#${item.linkId}`}
+                                                onClick={(e) => {
+                                                    e.preventDefault();
+                                                    scrollToSection(item.linkId);
+                                                }}
                                             >
-                                                {item?.navItem}
-                                            </a>
+                                                {item.navItem}
+                                            </Link>
                                         </li>)
                                     }
                                 </ul>

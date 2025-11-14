@@ -15,12 +15,15 @@ const ContextProvider: React.FC<{ children: React.ReactNode }> = ({ children }) 
   const toggleMobileMenu = () => {
     setIsMobileOpen((prev) => !prev);
   };
-
   const scrollToSection: ScrollToSection = (id: string) => {
     const element = document.getElementById(id);
-    if (element) { 
-      element.scrollIntoView({ behavior: "smooth" });
-    }
+    if (!element) return;
+    const offset = 70; // adgust height
+    const top = element.getBoundingClientRect().top + window.scrollY - offset;
+    window.scrollTo({
+      top,
+      behavior: "smooth",
+    });
   };
 
   const contextInfo: FreshFlowContextType = {
