@@ -18,7 +18,7 @@ const ContextProvider: React.FC<{ children: React.ReactNode }> = ({ children }) 
 
   const scrollToSection: ScrollToSection = (id: string) => {
     const element = document.getElementById(id);
-    if (element) {
+    if (element) { 
       element.scrollIntoView({ behavior: "smooth" });
     }
   };

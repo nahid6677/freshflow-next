@@ -212,7 +212,7 @@ const Header: React.FC = () => {
                                             <li><Link href="/pricing-carousel">Pricing Carousel</Link></li>
                                             <li><Link href="/gallery">Gallery</Link></li>
                                             <li><Link href="/faq">FAQs</Link></li>
-                                            <li><Link href="/error">404 Error</Link></li>
+                                            <li><Link href="/error-404">404 Error</Link></li>
                                             <li><Link href="/coming-soon">Coming Soon</Link></li>
                                         </ul>
                                     </li>

@@ -60,7 +60,7 @@ const AccordionItem: React.FC<AccordionItemProps> = ({
                 <div className="accrodion-content">
                     <div className="inner">
                         <div className="img-box">
-                            <Image src={image} alt={title} width={100} height={120} />
+                            <Image src={image} alt={title} width={160} height={141} />
                         </div>
                         <div className="content-box">
                             <h4 className="content-box-title">{contentTitle}</h4>

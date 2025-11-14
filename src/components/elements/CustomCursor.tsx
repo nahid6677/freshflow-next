@@ -1,12 +1,13 @@
 "use client";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 
 const CustomCursor = () => {
-    useEffect(() => {
-        const cursor = document.querySelector<HTMLDivElement>(".custom-cursor__cursor");
-        const cursorInner = document.querySelector<HTMLDivElement>(".custom-cursor__cursor-two");
-        const links = document.querySelectorAll<HTMLAnchorElement>("a");
+    const cursorRef = useRef<HTMLDivElement | null>(null);
+    const cursorInnerRef = useRef<HTMLDivElement | null>(null);
 
+    useEffect(() => {
+        const cursor = cursorRef.current;
+        const cursorInner = cursorInnerRef.current;
         if (!cursor || !cursorInner) return;
 
         const moveCursor = (e: MouseEvent) => {
@@ -28,14 +29,6 @@ const CustomCursor = () => {
             cursorInner.classList.remove("custom-cursor__innerhover");
         };
 
-        const handleLinkHover = () => cursor.classList.add("custom-cursor__hover");
-        const handleLinkLeave = () => cursor.classList.remove("custom-cursor__hover");
-
-        links.forEach((link) => {
-            link.addEventListener("mouseover", handleLinkHover);
-            link.addEventListener("mouseleave", handleLinkLeave);
-        });
-
         document.addEventListener("mousemove", moveCursor);
         document.addEventListener("mousemove", moveCursorInner);
         document.addEventListener("mousedown", mouseDown);
@@ -46,17 +39,13 @@ const CustomCursor = () => {
             document.removeEventListener("mousemove", moveCursorInner);
             document.removeEventListener("mousedown", mouseDown);
             document.removeEventListener("mouseup", mouseUp);
-
-            links.forEach((link) => {
-                link.removeEventListener("mouseover", handleLinkHover);
-                link.removeEventListener("mouseleave", handleLinkLeave);
-            });
         };
     }, []);
+
     return (
         <>
-            <div className="custom-cursor__cursor"></div>
-            <div className="custom-cursor__cursor-two"></div>
+            <div ref={cursorRef} className="custom-cursor__cursor"></div>
+            <div ref={cursorInnerRef} className="custom-cursor__cursor-two"></div>
         </>
     );
 };

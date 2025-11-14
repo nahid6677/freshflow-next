@@ -64,7 +64,7 @@
 @import './module-css/faq.css';
 
 body {
-  font-family: var(--font-dm-sans), var(--font-bricolage), sans-serif;
+  /* font-family: var(--font-dm-sans), var(--font-bricolage), sans-serif; */
 }
 
 :root {

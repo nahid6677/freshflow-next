@@ -81,7 +81,7 @@ const GalleryMain: React.FC = () => {
                                 <div className="gallery-page__single">
                                     <div className="gallery-page__img">
                                         <div className="gallery-page__img-box">
-                                            <Image src={item?.image} alt={item?.alt} width={50} height={50} />
+                                            <Image src={item?.image} alt={item?.alt} width={378} height={407} />
                                         </div>
                                         <div className="gallery-page__icon" >
                                             <button type="button" className="img-popup" onClick={() => {

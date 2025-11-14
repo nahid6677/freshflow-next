@@ -640,6 +640,7 @@ Video Popup
 
 .about-two__img-1 img {
     width: 100%;
+    height: auto;
     border-radius: 12px;
 }
 
@@ -672,6 +673,7 @@ Video Popup
 
 .about-two__img-2 img {
     width: 100%;
+    height: auto;
     border-radius: 12px;
 }
 
@@ -713,6 +715,7 @@ Video Popup
 
 .about-two__img-3 img {
     width: 100%;
+    height: auto;
     border-radius: 12px;
 }
 
@@ -745,6 +748,7 @@ Video Popup
 
 .about-two__img-4 img {
     width: 100%;
+    height: auto;
     border-radius: 12px;
 }
 

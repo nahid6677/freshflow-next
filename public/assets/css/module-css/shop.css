@@ -1286,6 +1286,7 @@ Product Details
 
 .product-details__img img {
     width: 100%;
+    height: auto;
     border: 1px solid #F1F1F2;
     border-radius: 15px;
 }
@@ -3661,6 +3662,14 @@ Product Description
 }
 
 
+
+.thumnal-slide-container {
+    width: 100%;
+    /* padding: 0 30px 0 20px; */
+    margin: 20px 0px 0 0px;
+}
+
+.thumnal-slide-container .thumnal-slide img {}
 
 /***
 =============================================

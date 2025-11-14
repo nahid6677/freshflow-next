@@ -169,7 +169,7 @@ const ProjectDetailsMain: React.FC = () => {
                         <div className="project-details__right">
                             <div className="project-details__img-box">
                                 <div className="project-details__img">
-                                    <Image src={projectDetailsImg1} alt={projectData.title} />
+                                    <Image src={projectDetailsImg1} alt={projectData.title} width={850} height={349} />
                                 </div>
                             </div>
                             <div className="project-details__content">

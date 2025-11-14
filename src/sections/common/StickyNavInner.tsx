@@ -189,7 +189,7 @@ const StickyNavInner = () => {
                                                 <Link href="/faq">FAQs</Link>
                                             </li>
                                             <li>
-                                                <Link href="/404">404 Error</Link>
+                                                <Link href="/error-404">404 Error</Link>
                                             </li>
                                             <li>
                                                 <Link href="/coming-soon">Coming Soon</Link>

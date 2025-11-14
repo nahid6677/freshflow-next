@@ -4,7 +4,7 @@ import { DM_Sans, Bricolage_Grotesque } from "next/font/google";
 import "../../public/assets/css/style.css";
 import "swiper/css";
 import "swiper/css/navigation";
-import 'swiper/css/pagination'; 
+import 'swiper/css/pagination';
 import CustomLayout from "@/components/layout/CustomLayout";
 
 const dmSans = DM_Sans({
@@ -27,7 +27,6 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
-      {/* ✅ Use both fonts in the body */}
       <body className={`${dmSans.variable} ${bricolage.variable}`}>
         <ContextProvider>
           <CustomLayout>

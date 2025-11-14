@@ -2,7 +2,7 @@
 "use client";
 
 import React, { useContext, useState } from 'react';
-import logo from "../../../public/assets/resources/newsletter-one-img-1-1.jpg"
+import logo from "../../../public/assets/images/resources/logo-2.png";
 import home_showcase_1 from "../../../public/assets/images/home-showcase/home-showcase-1-1.jpg";
 import home_showcase_2 from "../../../public/assets/images/home-showcase/home-showcase-1-2.jpg";
 import home_showcase_3 from "../../../public/assets/images/home-showcase/home-showcase-1-3.jpg";
@@ -27,6 +27,7 @@ const MobileNav: React.FC = () => {
         setIsShopOpen(false);
         setIsBlogOpen(false);
         setProducts(false);
+        setIsMobileOpen(false)
     };
 
     return (
@@ -39,12 +40,7 @@ const MobileNav: React.FC = () => {
 
                 <div className="logo-box">
                     <Link href="/" aria-label="logo image" onClick={handleLinkClick}>
-                        {/* <Image
-                            src="/public/assets/resources/logo-2.png"
-                            alt="Logo"
-                            width={150}
-                            height={100}
-                        /> */}
+                        <Image src={logo} width="150" alt="" />
                     </Link>
                 </div>
                 <div className="mobile-nav__container">
@@ -115,14 +111,14 @@ const MobileNav: React.FC = () => {
                                                             <div className="home-showcase__image">
                                                                 <Image src={home_showcase_1} alt="home-one single-page" />
                                                                 <div className="home-showcase__buttons">
-                                                                    <Link href="/" className='thm-btn home-showcase__buttons__item' onClick={handleLinkClick}>
+                                                                    <Link href="/single-page" className='thm-btn home-showcase__buttons__item' onClick={handleLinkClick}>
                                                                         View
                                                                         <span className="icon-diagonal-arrow"></span>
                                                                     </Link>
                                                                 </div>
                                                             </div>
                                                             <h3 className="home-showcase__title">
-                                                                Home Page 04
+                                                                Single Page
                                                             </h3>
                                                         </div>
                                                     </div>
@@ -178,7 +174,7 @@ const MobileNav: React.FC = () => {
                                     <Link href="/faq" onClick={handleLinkClick}>FAQs</Link>
                                 </li>
                                 <li>
-                                    <Link href="/error" onClick={handleLinkClick}>404 Error</Link>
+                                    <Link href="/error-404" onClick={handleLinkClick}>404 Error</Link>
                                 </li>
                                 <li>
                                     <Link href="/coming-soon" onClick={handleLinkClick}>Coming Soon</Link>

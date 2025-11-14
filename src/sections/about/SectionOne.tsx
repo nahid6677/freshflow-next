@@ -45,17 +45,17 @@ const SectionOne: React.FC = () => {
                                     <div className="col-xl-6 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="100ms">
                                         <div className="about-two__left-img-box">
                                             <div className="about-two__img-1">
-                                                <Image src={abimg4} alt="" />
+                                                <Image src={abimg4} alt=""   />
                                             </div>
                                             <div className="about-two__img-2">
-                                                <Image src={abimg5} alt="" />
+                                                <Image src={abimg5} alt=""  />
                                             </div>
                                         </div>
                                     </div>
                                     <div className="col-xl-6 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="200ms">
                                         <div className="about-two__left-img-box-2">
                                             <div className="about-two__img-3">
-                                                <Image src={abimg6} alt="" />
+                                                <Image src={abimg6} alt=""   />
                                             </div>
                                             <div className="about-two__img-4">
                                                 <Image src={abimg7} alt="" />
@@ -365,7 +365,7 @@ const SectionOne: React.FC = () => {
                             <li className="col-xl-3 col-lg-6 col-md-6">
                                 <div className="process-one__single">
                                     <div className="process-one__single-shape-1">
-                                        <Image src={abimg17} alt="" />
+                                        <Image src={abimg17} alt="" width={323} height={35}/>
                                     </div>
                                     <h3 className="process-one__title">Apply Now</h3>
                                     <p className="process-one__text">Enjoy a hassle-free booking process<br /> with our
@@ -382,7 +382,7 @@ const SectionOne: React.FC = () => {
                             <li className="col-xl-3 col-lg-6 col-md-6">
                                 <div className="process-one__single">
                                     <div className="process-one__single-shape-1">
-                                        <Image src={abimg18} alt="" />
+                                        <Image src={abimg18} alt="" width={323}/>
                                     </div>
                                     <h3 className="process-one__title">Fix The Date</h3>
                                     <p className="process-one__text">We provide customized cleaning <br />solutions that address
@@ -399,7 +399,7 @@ const SectionOne: React.FC = () => {
                             <li className="col-xl-3 col-lg-6 col-md-6">
                                 <div className="process-one__single">
                                     <div className="process-one__single-shape-1">
-                                        <Image src={abimg19} alt="" />
+                                        <Image src={abimg19} alt="" width={323}/>
                                     </div>
                                     <h3 className="process-one__title">As Soon Hire Us</h3>
                                     <p className="process-one__text">We ensure top-notch quality with <br />detailed inspections
@@ -416,7 +416,7 @@ const SectionOne: React.FC = () => {
                             <li className="col-xl-3 col-lg-6 col-md-6">
                                 <div className="process-one__single">
                                     <div className="process-one__single-shape-1">
-                                        <Image src={abimg20} alt="" />
+                                        <Image src={abimg20} alt="" width={323} />
                                     </div>
                                     <h3 className="process-one__title">Starting Cleaning</h3>
                                     <p className="process-one__text">Enjoy a hassle-free booking process<br /> with our

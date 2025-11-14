@@ -131,7 +131,7 @@ const TeamGallery: React.FC = () => {
                                             <SwiperSlide key={index}>
                                                 <div className="office-gallery__carousel-single">
                                                     <div className="office-gallery__carousel-img">
-                                                        <Image src={image.src} alt={image.alt || ''} width={250} height={590}/>
+                                                        <Image src={image.src} alt={image.alt || ''} width={410} height={580} loading="eager"/>
                                                     </div>
                                                 </div>
                                             </SwiperSlide>

@@ -19,7 +19,6 @@ const Banner: React.FC = () => {
     const [isDeleting, setIsDeleting] = useState<boolean>(false);
     const [satisfiedCount, setSatisfiedCount] = useState<number>(0);
     const [ratingCount, setRatingCount] = useState<number>(0);
-
     // Typing effect
     useEffect(() => {
         const typedStrings: string[] = [
@@ -58,17 +57,21 @@ const Banner: React.FC = () => {
     useEffect(() => {
         const satisfiedTimer = setInterval(() => {
             setSatisfiedCount(prev => {
-                if (prev < 200) return prev + 2;
-                clearInterval(satisfiedTimer);
-                return 200;
+                if (prev < 200) {
+                    return prev + 2;
+                } else {
+                    return prev;
+                }
             });
         }, 30);
 
         const ratingTimer = setInterval(() => {
             setRatingCount(prev => {
-                if (prev < 12) return prev + 1;
-                clearInterval(ratingTimer);
-                return 12;
+                if (prev < 12) {
+                    return prev + 1;
+                } else {
+                    return prev;
+                }
             });
         }, 250);
 
