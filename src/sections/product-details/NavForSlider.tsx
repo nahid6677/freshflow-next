@@ -42,7 +42,7 @@ const NavForSlider: React.FC = () => {
                 navigation={{
                     prevEl: ".custom-arrow.prev",
                     nextEl: ".custom-arrow.next",
-                }} 
+                }}
                 autoplay={{
                     delay: 5000,
                     disableOnInteraction: false,
@@ -78,38 +78,38 @@ const NavForSlider: React.FC = () => {
 
             <div className="thumnal-slide-container" >
                 <Swiper
-                modules={[Thumbs, Autoplay,]}
-                // onSwiper={setThumbsSwiper}
-                slidesPerView={4}
-                // spaceBetween={10}
-                watchSlidesProgress={true}
-                autoplay={{
-                    delay: 5000,
-                    disableOnInteraction: false,
-                }}
-                speed={600}
-                loop={true}
-                className="thumb-swiper"
-                breakpoints={{
-                    280: {
-                        slidesPerView: 3,
-                    },
-                    576: {
-                        slidesPerView: 3,
-                    },
-                    1080: {
-                        slidesPerView: 3,
-                    }
-                }}
-            >
-                {thumbnailImages.map((image) => (
-                    <SwiperSlide key={image.id} className="thumnal-slide">
-                        <div className="product-details__thumb-img">
-                            <Image src={image.src} alt={image.alt} width={125}  />
-                        </div>
-                    </SwiperSlide>
-                ))}
-            </Swiper>
+                    modules={[Thumbs, Autoplay,]}
+                    // onSwiper={setThumbsSwiper}
+                    slidesPerView={4}
+                    // spaceBetween={10}
+                    watchSlidesProgress={true}
+                    autoplay={{
+                        delay: 5000,
+                        disableOnInteraction: false,
+                    }}
+                    speed={600}
+                    loop={true}
+                    className="thumb-swiper"
+                    breakpoints={{
+                        280: {
+                            slidesPerView: 3,
+                        },
+                        576: {
+                            slidesPerView: 3,
+                        },
+                        1080: {
+                            slidesPerView: 3,
+                        }
+                    }}
+                >
+                    {thumbnailImages.map((image) => (
+                        <SwiperSlide key={image.id} className="thumnal-slide">
+                            <div className="product-details__thumb-img">
+                                <Image src={image.src} alt={image.alt} width={125} height={125} />
+                            </div>
+                        </SwiperSlide>
+                    ))}
+                </Swiper>
             </div>
 
         </div>

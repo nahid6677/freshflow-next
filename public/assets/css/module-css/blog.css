@@ -1833,6 +1833,7 @@
 .blog-list__pagination {
     position: relative;
     display: block;
+    z-index: 9;
 }
 
 .blog-list__pagination .pg-pagination li {

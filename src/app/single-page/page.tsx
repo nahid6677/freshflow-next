@@ -40,8 +40,7 @@ const SingleHomePage: React.FC = () => {
                 });
             },
             {
-                // threshold: currentPath === "/single-page" ? 0.1 : 0.5,
-                threshold: 0.25,
+                threshold: 0.2,
             }
         );
 

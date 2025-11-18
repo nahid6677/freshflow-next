@@ -123,7 +123,91 @@ export const Allblogs: Blog[] = [
         },
         title: "Cleaning Hacks vs Professional Help: When to Call the Experts",
         text: "Learn when DIY cleaning falls short and why professional services"
-    }
+    },
+    {
+        id: 9,
+        image: blogImg1,
+        date: {
+            day: "05",
+            month: "NOV"
+        },
+        links: {
+            link1: "Cleaning",
+            link2: "Sparkling",
+        },
+        title: "10 Simple Cleaning Hacks for a Spotless Home",
+        text: "Discover quick and effective cleaning tips to keep your home sparkling"
+    },
+    {
+        id: 10,
+        image: blogImg2,
+        date: {
+            day: "24",
+            month: "APR"
+        },
+        links: {
+            link1: "Moping",
+            link2: "Sparkling",
+        },
+        title: "Top 5 Reasons Your Business Needs Expert Cleaning Services",
+        text: "Explore how a clean workplace boosts productivity, impresses clients"
+    },
+    {
+        id: 11,
+        image: blogImg3,
+        date: {
+            day: "24",
+            month: "APR"
+        },
+        links: {
+            link1: "Cleaning",
+            link2: "Moping",
+        },
+        title: "How Our Cleaning Agency Makes a Difference",
+        text: "A behind-the-scenes look at how a professional cleaning team transforms messy spaces"
+    },
+    {
+        id: 12,
+        image: blogImg4,
+        date: {
+            day: "30",
+            month: "DEC"
+        },
+        links: {
+            link1: "Sparkling",
+            link2: "Moping",
+        },
+        title: "Cleaning Hacks vs Professional Help: When to Call the Experts",
+        text: "Learn when DIY cleaning falls short and why professional services"
+    },
+    {
+        id: 13,
+        image: blogImg2,
+        date: {
+            day: "05",
+            month: "NOV"
+        },
+        links: {
+            link1: "Cleaning",
+            link2: "Sparkling",
+        },
+        title: "10 Simple Cleaning Hacks for a Spotless Home",
+        text: "Discover quick and effective cleaning tips to keep your home sparkling"
+    },
+    {
+        id: 14,
+        image: blogImg1,
+        date: {
+            day: "24",
+            month: "APR"
+        },
+        links: {
+            link1: "Moping",
+            link2: "Sparkling",
+        },
+        title: "Top 5 Reasons Your Business Needs Expert Cleaning Services",
+        text: "Explore how a clean workplace boosts productivity, impresses clients"
+    },
 ]
 
 
