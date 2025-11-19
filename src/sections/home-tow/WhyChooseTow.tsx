@@ -10,6 +10,7 @@ import Image from 'next/image';
 import AdvanceCountUp from '@/components/elements/AdvanceCountUp';
 import FreshFlowMarquee from '@/components/elements/FreshFlowMarquee';
 import Link from 'next/link';
+import TextAnimation from '@/components/elements/TextAnimation';
 
 const WhyChooseTow: React.FC = () => {
     const textContent: string[] = [
@@ -42,8 +43,9 @@ const WhyChooseTow: React.FC = () => {
                                     </div>
                                     <span className="section-title__tagline">Why Choose Us</span>
                                 </div>
-                                <h2 className="section-title__title title-animation">What Makes Us the Perfect Cleaning
-                                    Partner? our Clean Space, Our Commitment!
+                                <h2 className="section-title__title">
+                                    <TextAnimation text='What Makes Us the Perfect' textColor='white'/><br></br>
+                                    <TextAnimation text='Cleaning Partner?' textColor='white'/>
                                 </h2>
                             </div>
                             <div className="why-choose-two__client-box-inner">

@@ -9,6 +9,7 @@ import img_list_2 from '../../../public/assets/images/resources/before-and-after
 import img_list_3 from '../../../public/assets/images/resources/before-and-after-img-list-img-3.jpg'
 import Image from "next/image";
 import BeforeAfterSlider from "@/components/elements/BeforeAfterSlider";
+import TextAnimation from "@/components/elements/TextAnimation";
 const AfterBeforeSingle: React.FC = () => {
     return (
         <section className="before-and-after">
@@ -53,7 +54,9 @@ const AfterBeforeSingle: React.FC = () => {
                                     </div>
                                     <span className="section-title__tagline">Before After</span>
                                 </div>
-                                <h2 className="section-title__title title-animation">Recent <span>Completed Projects</span>
+                                <h2 className="section-title__title title-animation">
+                                    <TextAnimation text="Recent" textColor="black" /> <br></br>
+                                    <TextAnimation text="Completed Projects" />
                                 </h2>
                             </div>
                             <p className="before-and-after__text">Discover the details of our most recent completed

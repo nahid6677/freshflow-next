@@ -1,3 +1,4 @@
+"use client"
 import React from 'react';
 import projectTow1 from "../../../public/assets/images/shapes/project-two-shape-1.png"
 import projectTow2 from "../../../public/assets/images/shapes/project-two-shape-2.png"
@@ -9,7 +10,8 @@ import projectTow7 from "../../../public/assets/images/project/project-2-4.jpg"
 import projectTow8 from "../../../public/assets/images/project/project-2-6.jpg"
 import Image, { StaticImageData } from 'next/image';
 import Link from 'next/link';
-
+import TextAnimation from '@/components/elements/TextAnimation';
+import { motion } from "framer-motion"
 interface Item {
     id: number,
     image: string | StaticImageData,
@@ -74,8 +76,9 @@ const ProjectsTow: React.FC = () => {
                             </div>
                             <span className="section-title__tagline">Our Projects</span>
                         </div>
-                        <h2 className="section-title__title title-animation">A showcase of projects
-                            <span>that</span><br /><span>define excellence & innovation.</span>
+                        <h2 className="section-title__title title-animation">
+                            <TextAnimation text='A showcase of projects that' textColor='black' /><br></br>
+                            <TextAnimation text='define excellence & innovation.' />
                         </h2>
                     </div>
                     <div className="project-two__btn-box">
@@ -88,8 +91,16 @@ const ProjectsTow: React.FC = () => {
                 </div>
                 <div className="row masonary-layout">
                     {
-                        items.map((item, i) => <div key={i} className="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="200ms"
-                            data-wow-duration="1500ms">
+                        items.map((item, i) => <motion.div
+                            initial={{ x: (i + 1) % 2 === 0 ? 15 : -15, opacity: 0 }}
+                            whileInView={{ x: 0, opacity: 1 }}
+                            transition={{
+                                duration: 0.5,
+                                ease: "easeOut"
+                            }}
+                            viewport={{ once: true, amount: 0.1 }}
+
+                            key={i} className="col-xl-4 col-lg-6 col-md-6 " >
                             <div className="project-two__single">
                                 <div className="project-two__img-box">
                                     <div className="project-two__img">
@@ -122,7 +133,7 @@ const ProjectsTow: React.FC = () => {
                                     </div>
                                 </div>
                             </div>
-                        </div>)
+                        </motion.div>)
                     }
                 </div>
             </div>

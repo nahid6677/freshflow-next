@@ -1,8 +1,11 @@
+"use client"
 import Image from 'next/image';
 import Link from 'next/link';
-import React from 'react';  
+import React from 'react';
 import { blogsHomeTow } from './contents';
 import { BlogHomeTow } from '@/types/home-tow';
+import TextAnimation from '@/components/elements/TextAnimation';
+import { motion } from "framer-motion"
 const OurBlogTow: React.FC = () => {
     return (
         <section className="blog-two">
@@ -17,12 +20,22 @@ const OurBlogTow: React.FC = () => {
                         </div>
                         <span className="section-title__tagline">Our Blogs</span>
                     </div>
-                    <h2 className="section-title__title title-animation">Destination for Inspiration,<br />
-                        <span>Tips, Plan and Stories</span></h2>
+                    <h2 className="section-title__title title-custom-animation">
+                        <TextAnimation text='Destination for Inspiration' textColor='black' />
+                        <TextAnimation text='Tips, Plan and Stories' />
+                    </h2>
                 </div>
                 <div className="row">
                     {
-                        blogsHomeTow.map((item: BlogHomeTow, i: number) => <div key={i} className="col-xl-6 wow fadeInLeft" data-wow-delay="100ms" data-wow-duration="1500ms">
+                        blogsHomeTow.map((item: BlogHomeTow, i: number) => <motion.div
+                            initial={{ x: (i + 1) % 2 === 0 ? 25 : -25, opacity: 0 }}
+                            whileInView={{ x: 0, opacity: 1 }}
+                            transition={{
+                                duration: 0.8,
+                                ease: "easeOut"
+                            }}
+                            viewport={{ once: true, amount: 0.1 }}
+                            key={i} className="col-xl-6 wow fadeInLeft" data-wow-delay="100ms" data-wow-duration="1500ms">
                             <div className="blog-two__single">
                                 <div className="blog-two__img">
                                     <Image src={item?.image} alt="blog image" />
@@ -68,7 +81,7 @@ const OurBlogTow: React.FC = () => {
                                     </div>
                                 </div>
                             </div>
-                        </div>)
+                        </motion.div>)
                     }
                 </div>
             </div>

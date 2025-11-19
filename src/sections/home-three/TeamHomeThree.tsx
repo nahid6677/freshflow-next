@@ -16,6 +16,7 @@ import teamimg5 from "../../../public/assets/images/team/team-two-1-5.jpg"
 import teamimg6 from "../../../public/assets/images/team/team-two-1-6.jpg"
 import Image, { StaticImageData } from 'next/image';
 import Link from 'next/link';
+import TextAnimation from '@/components/elements/TextAnimation';
 
 
 interface TabButtonTeam {
@@ -124,8 +125,10 @@ const TeamHomeThree: React.FC = () => {
                         </div>
                         <span className="section-title__tagline">Our Team member</span>
                     </div>
-                    <h2 className="section-title__title title-animation">Meet Our Professional Team <br /> Dedicated
-                        <span>to Excellence</span></h2>
+                    <h2 className="section-title__title title-custom-animation">
+                        <TextAnimation text='Meet Our Professional Team' textColor='black' />
+                        <TextAnimation text='Dedicated to Excellence' />
+                    </h2>
                 </div>
                 <div className="team-two__inner">
                     <div className="team-two__main-tab-box tabs-box">

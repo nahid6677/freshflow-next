@@ -9,6 +9,7 @@ import servimg6 from '../../../public/assets/images/services/services-2-4.jpg';
 import servimg7 from '../../../public/assets/images/services/services-2-5.jpg';
 import Image, { StaticImageData } from 'next/image';
 import Link from 'next/link';
+import TextAnimation from '@/components/elements/TextAnimation';
 
 // Define types
 interface HoverItem {
@@ -99,11 +100,9 @@ const ServiceTwo: React.FC = () => {
                         </div>
                         <span className="section-title__tagline">Our Services</span>
                     </div>
-                    <h2 className="section-title__title title-animation">
-                        Explore the Full Range of
-                        <span>Services We</span>
-                        <br />
-                        <span>Offer to Meet Your Needs</span>
+                    <h2 className="section-title__title title-custom-animation">
+                        <TextAnimation text='Explore the Full Range of Services We' textColor='black'/>
+                        <TextAnimation text='Offer to Meet Your Needs' /> 
                     </h2>
                 </div>
                 <div className="services-two__inner">

@@ -29,7 +29,7 @@ const Testimonial: React.FC = () => {
                             <span className="section-title__tagline">Testimonial</span>
                         </div>
                         <h2 className="section-title__title title-animation">
-                            <TextAnimation text='Hear from our satisfied' textColor='black' />
+                            <TextAnimation text='Hear from our satisfied' textColor='black' /><br></br>
                             <TextAnimation text='clients who praise' /> </h2>
                     </div>
                     <TestimonialSlider />

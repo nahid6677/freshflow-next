@@ -8,6 +8,7 @@ import officImg6 from "../../../public/assets/images/resources/office-location-p
 import officImg7 from "../../../public/assets/images/resources/office-location-popup-img-5.jpg"
 import Link from 'next/link'
 import Image from 'next/image'
+import TextAnimation from '@/components/elements/TextAnimation'
 
 const OfficeLocationSingle: React.FC = () => {
     return (
@@ -24,8 +25,9 @@ const OfficeLocationSingle: React.FC = () => {
                                     </div>
                                     <span className="section-title__tagline">OUR Offices</span>
                                 </div>
-                                <h2 className="section-title__title title-animation">Discover the Location of Our Office and
-                                    <span>Visit Us Today</span>
+                                <h2 className="section-title__title title-animation">
+                                    <TextAnimation text='Discover the Location of' textColor='black' />
+                                    <TextAnimation text='Office and Visit Us Today' />
                                 </h2>
                             </div>
                             <p className="office-location__text">Find our office location and stop by today—we had love to see

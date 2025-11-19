@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import contactimg1 from "../../../public/assets/images/shapes/contact-two-shape-1.png"
 import contactimg2 from "../../../public/assets/images/shapes/contact-two-shape-2.png"
 import Image from 'next/image';
+import TextAnimation from '@/components/elements/TextAnimation';
 
 const ContactTow: React.FC = () => {
     const [serviceType, setServiceType] = useState<string>("1")
@@ -30,8 +31,11 @@ const ContactTow: React.FC = () => {
                                     </div>
                                     <span className="section-title__tagline">Get in Touch</span>
                                 </div>
-                                <h2 className="section-title__title title-animation">lets you connect with experts, get
-                                    advice, advice, and explore solutions
+                                <h2 className="section-title__title title-animation">
+                                    <TextAnimation text='lets you connect with experts, get' textColor='white'/>
+                                    <TextAnimation text='advice, advice, and explore solutions' textColor='white'/>
+                                    
+                                    
                                 </h2>
                             </div>
                             <div className="contact-two__inner">

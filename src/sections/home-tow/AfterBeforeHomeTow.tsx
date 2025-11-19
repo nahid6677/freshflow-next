@@ -13,6 +13,7 @@ import BeforeAfterSlider from '@/components/elements/BeforeAfterSlider';
 import AdvanceCountUp from '@/components/elements/AdvanceCountUp';
 import Link from 'next/link';
 import FreshFlowMarquee from '@/components/elements/FreshFlowMarquee';
+import TextAnimation from '@/components/elements/TextAnimation';
 
 
 
@@ -122,8 +123,9 @@ const AfterBeforeHomeTow: React.FC = () => {
                                     </div>
                                     <span className="section-title__tagline">Before After</span>
                                 </div>
-                                <h2 className="section-title__title title-animation">Benefited After Clearing <br /><span>Your
-                                    Organization</span>
+                                <h2 className="section-title__title title-animation">
+                                    <TextAnimation text='Benefited After Clearing' textColor='black' /><br></br>
+                                    <TextAnimation text='Your Organization' />
                                 </h2>
                             </div>
                             <div className="before-after-two__img-box-2">

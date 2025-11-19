@@ -3,6 +3,7 @@ import React from 'react';
 import { Blog } from '@/types/home-one';
 import Image from 'next/image';
 import { blogs } from '../home-one/Contents';
+import TextAnimation from '@/components/elements/TextAnimation';
 
 const BlogSingle: React.FC = () => {
     return (
@@ -17,8 +18,9 @@ const BlogSingle: React.FC = () => {
                             </div>
                             <span className="section-title__tagline">OUR INSIGHT</span>
                         </div>
-                        <h2 className="section-title__title title-animation">Discover Insights and <span>Tips </span> <br />
-                            <span>in Our Latest Articles</span>
+                        <h2 className="section-title__title title-animation">
+                            <TextAnimation text='Discover Insights and Tips' textColor='black' /><br></br>
+                            <TextAnimation text='in Our Latest Articles' />
                         </h2>
                     </div>
                     <div className="blog-one__btn-box">

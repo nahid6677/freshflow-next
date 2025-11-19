@@ -1,3 +1,4 @@
+"use client"
 import React from 'react';
 import service1_shape_4 from "../../../public/assets/images/shapes/services-one-shape-4.png";
 import service1_shape_3 from "../../../public/assets/images/shapes/services-one-shape-3.png";
@@ -11,10 +12,12 @@ import services15 from "../../../public/assets/images/services/services-1-5.jpg"
 import Image from 'next/image';
 import Link from 'next/link';
 import AdvanceCountUp from '@/components/elements/AdvanceCountUp';
+import { motion } from "framer-motion"
+import TextAnimation from '@/components/elements/TextAnimation';
 
 const ServiceSingle: React.FC = () => {
     return (
-        <section className="services-one" id='services'>
+        <section className="services-one">
             <div className="services-one__shape-bg"></div>
             <div className="services-one__shape-1"></div>
             <div className="services-one__shape-2"></div>
@@ -39,8 +42,8 @@ const ServiceSingle: React.FC = () => {
                                         <span className="section-title__tagline">Services</span>
                                     </div>
                                     <h2 className="section-title__title title-animation">
-                                        Sparkling Spaces, Happy Faces
-                                        <span>Your Trusted Cleaning!</span>
+                                        <TextAnimation text='Sparkling Spaces, Happy Faces' textColor='black' />
+                                        <TextAnimation text='Your Trusted Cleaning!' textColor='' />
                                     </h2>
                                 </div>
                             </div>
@@ -60,10 +63,15 @@ const ServiceSingle: React.FC = () => {
                 <div className="services-one__bottom">
                     <div className="row">
                         <div className="col-xl-5">
-                            <div
-                                className="services-one__left wow slideInLeft"
-                                data-wow-delay="100ms"
-                                data-wow-duration="2500ms"
+                            <motion.div
+                                initial={{ x: -100, opacity: 0 }}
+                                whileInView={{ x: 0, opacity: 1 }}
+                                transition={{
+                                    duration: 1.8,
+                                    ease: "easeOut"
+                                }}
+                                viewport={{ once: true, amount: 0.1 }}
+                                className="services-one__left"
                             >
                                 <div className="services-one__img-box">
                                     <div className="services-one__img-shape-1"></div>
@@ -85,7 +93,7 @@ const ServiceSingle: React.FC = () => {
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </motion.div>
                         </div>
 
                         <div className="col-xl-7">

@@ -6,6 +6,7 @@ import singleShape2 from '../../../public/assets/images/shapes/process-one-singl
 import singleShape3 from '../../../public/assets/images/shapes/process-one-single-shape-3.png';
 import singleShape4 from '../../../public/assets/images/shapes/process-one-single-shape-4.png';
 import Image, { StaticImageData } from 'next/image';
+import TextAnimation from '@/components/elements/TextAnimation';
 
 interface ProcessStep {
     id: number,
@@ -63,12 +64,9 @@ const ProcessTow: React.FC = () => {
                         </div>
                         <span className="section-title__tagline">Working Process</span>
                     </div>
-                    <h2 className="section-title__title title-animation">
-                        {`Here's a step-by-step`}
-                        <span> breakdown</span><br />
-                        <span>
-                            of working process:
-                        </span>
+                    <h2 className="section-title__title title-custom-animation">
+                        <TextAnimation text={`Here's a step-by-step breakdown`} textColor='black' />
+                        <TextAnimation text={`of working process`} />
                     </h2>
                 </div>
                 <div className="process-one__inner">

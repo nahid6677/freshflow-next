@@ -12,7 +12,8 @@ import Image from 'next/image';
 import AdvanceCountUp from '@/components/elements/AdvanceCountUp';
 import Link from 'next/link';
 import VideoPopup from '@/components/elements/VideoPopup';
-
+import TextAnimation from '@/components/elements/TextAnimation';
+import { motion } from "framer-motion"
 const WhyChooseSingle: React.FC = () => {
     const [showVideoPopup, setShowVideoPopup] = useState<boolean>(false);
     const [currentVideoUrl, setCurrentVideoUrl] = useState<string>("");
@@ -57,13 +58,22 @@ const WhyChooseSingle: React.FC = () => {
                                         </span>
                                     </div>
                                     <h2 className="section-title__title title-animation">
-                                        What Makes Us the Perfect Cleaning Partner?{" "}
-                                        <span>Your Clean</span>
-                                        <br />
-                                        <span> Space, Our Commitment!</span>
+                                        <TextAnimation text='What Makes Us the Perfect' textColor='black' />
+                                        <TextAnimation text='Cleaning Partner? Your Clean' textColor='black' />
+                                        <TextAnimation text='Cleaning Partner?' />
+                                        <TextAnimation text='Space, Our Commitment!' />
                                     </h2>
                                 </div>
-                                <div className="row">
+                                <motion.div
+                                    initial={{ x: -100, opacity: 0 }}
+                                    whileInView={{ x: 0, opacity: 1 }}
+                                    transition={{
+                                        duration: 1.8,
+                                        ease: "easeOut"
+                                    }}
+                                    viewport={{ once: true, amount: 0.1 }}
+                                    className="row">
+
                                     <div className="col-xl-6 col-lg-6 col-md-6">
                                         <div className="why-choose-one__img-box-1">
                                             <div className="why-choose-one__img-1">
@@ -108,11 +118,19 @@ const WhyChooseSingle: React.FC = () => {
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                </motion.div>
                             </div>
                         </div>
                         <div className="col-xl-6">
-                            <div className="why-choose-one__right">
+                            <motion.div
+                                initial={{ x: 100, opacity: 0 }}
+                                whileInView={{ x: 0, opacity: 1 }}
+                                transition={{
+                                    duration: 1.8,
+                                    ease: "easeOut"
+                                }}
+                                viewport={{ once: true, amount: 0.1 }}
+                                className="why-choose-one__right">
                                 <div className="why-choose-one__client-box">
                                     <div className="why-choose-one__client-content">
                                         <div className="why-choose-one__client-inner">
@@ -270,7 +288,7 @@ const WhyChooseSingle: React.FC = () => {
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </motion.div>
                         </div>
                     </div>
                 </div>

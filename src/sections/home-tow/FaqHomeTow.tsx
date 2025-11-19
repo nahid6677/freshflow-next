@@ -6,6 +6,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { accordionItems1 } from './contents';
 import AccorditionItemFaq from '@/components/elements/AccorditionItemFaq';
+import TextAnimation from '@/components/elements/TextAnimation';
 const FaqHomeTow: React.FC = () => {
     const [activeAcc, setActiveAcc] = useState<number | null>(2);
 
@@ -33,8 +34,10 @@ const FaqHomeTow: React.FC = () => {
                                     </div>
                                     <span className="section-title__tagline">FAQs</span>
                                 </div>
-                                <h2 className="section-title__title title-animation">Your Questions Answered <br />
-                                    <span>Explore Our FAQs</span></h2>
+                                <h2 className="section-title__title title-animation">
+                                    <TextAnimation text='Your Questions Answered' textColor='black' /><br></br>
+                                    <TextAnimation text='Explore Our FAQs' />
+                                </h2>
                             </div>
                             <p className="faq-one__text">Everything you need to know. Detailed <br /> overview of our
                                 frequently asked questions</p>

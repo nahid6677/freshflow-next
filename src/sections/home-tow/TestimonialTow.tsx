@@ -11,6 +11,7 @@ import { Navigation, Autoplay, EffectFade } from 'swiper/modules';
 import type { Swiper as SwiperType } from 'swiper';
 import Image, { StaticImageData } from 'next/image';
 import Link from 'next/link';
+import TextAnimation from '@/components/elements/TextAnimation';
 
 
 interface Testimonial {
@@ -103,8 +104,10 @@ const TestimonialTow: React.FC = () => {
                         </div>
                         <span className="section-title__tagline">Testimonial</span>
                     </div>
-                    <h2 className="section-title__title title-animation">Hear from our <span>satisfied</span> <br />
-                        <span>clients who praise</span></h2>
+                    <h2 className="section-title__title title-animation">
+                        <TextAnimation text='Hear from our satisfied' textColor='black' /> <br></br>
+                        <TextAnimation text='clients who praise' />
+                    </h2>
                 </div>
                 <div className="testimonial-two__carousel  owl-theme owl-carousel">
                     <Swiper

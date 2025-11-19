@@ -173,7 +173,7 @@ const SectionTitle: FC = () => (
             <span className="section-title__tagline">OUR Team Member</span>
         </div>
         <h2 className="section-title__title title-animation">
-            <TextAnimation text="Meet the Experts Behind Our Success." textColor="black" />
+            <TextAnimation text="Meet the Experts Behind Our Success." textColor="black" /> <br></br>
             <TextAnimation text="Our Dedicated Team at Your Service" />
         </h2>
     </div>

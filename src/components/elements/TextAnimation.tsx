@@ -50,8 +50,8 @@ const TextAnimation: React.FC<Props> = ({ text, textColor }) => {
             style={{
                 whiteSpace: "normal",
                 display: "inline-block",
-                // fontSize: "clamp(16px, 4vw, 32px)", // RESPONSIVE TEXT
-                // lineHeight: "1.3"
+                fontSize: "clamp(16px, 4vw, 32px)", // RESPONSIVE TEXT
+                lineHeight: "1.3"
             }}
             variants={container}
             initial="hidden"

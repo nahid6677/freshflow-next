@@ -60,7 +60,7 @@ const FooterInner: React.FC = () => {
                                 <div className="site-footer-two__top-right">
                                     <div className="site-footer-two__widget-box">
                                         <div className="row">
-                                            <div className="col-xl-4 col-lg-4 col-md-4 wow fadeInUp" data-wow-delay="100ms">
+                                            <div className="col-xl-4 col-lg-4 col-md-4">
                                                 <motion.div
                                                     initial={{ y: 50, opacity: 0 }}
                                                     whileInView={{ y: 0, opacity: 1 }}

@@ -2,6 +2,7 @@
 import React from 'react';
 import contimg1 from "../../../public/assets/images/resources/contact-three-img-1.jpg";
 import Image from 'next/image';
+import { motion } from "framer-motion"
 const ContactThree: React.FC = () => {
     return (
         <section className="contact-three">
@@ -48,13 +49,21 @@ const ContactThree: React.FC = () => {
                     </div>
                     <div className="col-xl-5 col-lg-5">
                         <div className="contact-three__right">
-                            <div className="contact-three__img-box">
+                            <motion.div
+                                initial={{ x: 100, opacity: 0 }}
+                                whileInView={{ x: 0, opacity: 1 }}
+                                transition={{
+                                    duration: 1.8,
+                                    ease: "easeOut"
+                                }}
+                                viewport={{ once: true, amount: 0.01 }}
+                                className="contact-three__img-box">
                                 <div className="contact-three__img-inner">
                                     <div className="contact-three__img">
                                         <Image src={contimg1} alt="" />
                                     </div>
                                 </div>
-                            </div>
+                            </motion.div>
                             <div className="contact-three__contact-info">
                                 <ul className="list-unstyled contact-three__contact-info-list">
                                     <li>

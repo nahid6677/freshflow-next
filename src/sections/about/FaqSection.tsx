@@ -38,9 +38,7 @@ const FaqSection: React.FC = () => {
                     </div>
                     <h2 className="section-title__title title-custom-animation">
                         <TextAnimation text='Celebrating Excellence Our Award' textColor='black' />
-                        <TextAnimation text='Winning Achievements!' />
-                        <span></span> <br />
-                        <span></span>
+                        <TextAnimation text='Winning Achievements!' /> 
                     </h2>
                 </div>
                 <div className="row">

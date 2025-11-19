@@ -3,7 +3,7 @@
 import React, { useState, useCallback } from "react";
 import type { FC, FormEvent, ChangeEvent } from "react";
 import Image from "next/image";
-
+import { motion } from "framer-motion"
 // Assets
 import contImg1 from "../../../public/assets/images/shapes/contact-one-shape-2.png";
 import contImg2 from "../../../public/assets/images/shapes/contact-one-shape-3.png";
@@ -122,7 +122,7 @@ const ContactSingle: React.FC = () => {
     );
 
     return (
-        <section className="contact-one" id="contact">
+        <section className="contact-one">
             <div className="contact-one__shape-1"></div>
             <div className="contact-one__shape-2 zoom-fade">
                 <Image
@@ -143,9 +143,17 @@ const ContactSingle: React.FC = () => {
 
             <div className="container">
                 <div className="row">
-                    <div className="col-xl-6">
+                    < motion.div
+                        initial={{ x: -100, opacity: 0 }}
+                        whileInView={{ x: 0, opacity: 1 }}
+                        transition={{
+                            duration: 1.5,
+                            ease: "easeOut"
+                        }}
+                        viewport={{ once: true, amount: 0.1 }}
+                        className="col-xl-6">
                         <ImageSection />
-                    </div>
+                    </motion.div>
 
                     <div className="col-xl-6">
                         <div className="contact-one__right">

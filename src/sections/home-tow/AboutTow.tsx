@@ -1,3 +1,4 @@
+"use client"
 import React from 'react'
 import abimg1 from '../../../public/assets/images/shapes/about-two-shape-1.png'
 import abimg2 from "../../../public/assets/images/shapes/about-two-shape-2.png"
@@ -9,6 +10,9 @@ import abimg7 from "../../../public/assets/images/resources/about-two-img-4.jpg"
 import Image from 'next/image'
 import Link from 'next/link'
 import AdvanceCountUp from '@/components/elements/AdvanceCountUp'
+import { motion } from "framer-motion"
+import TextAnimation from '@/components/elements/TextAnimation'
+
 const AboutTow: React.FC = () => {
     return (
         <section className="about-two">
@@ -29,22 +33,54 @@ const AboutTow: React.FC = () => {
                             <div className="row">
                                 <div className="col-xl-6 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="100ms">
                                     <div className="about-two__left-img-box">
-                                        <div className="about-two__img-1">
+                                        <motion.div
+                                            initial={{ y: 50, opacity: 0 }}
+                                            whileInView={{ y: 0, opacity: 1 }}
+                                            transition={{
+                                                duration: 0.5,
+                                                ease: "easeOut"
+                                            }}
+                                            viewport={{ once: true, amount: 0.1 }}
+                                            className="about-two__img-1">
                                             <Image src={abimg4} alt="" />
-                                        </div>
-                                        <div className="about-two__img-2">
+                                        </motion.div>
+                                        <motion.div
+                                            initial={{ y: 50, opacity: 0 }}
+                                            whileInView={{ y: 0, opacity: 1 }}
+                                            transition={{
+                                                duration: 0.5,
+                                                ease: "easeOut"
+                                            }}
+                                            viewport={{ once: true, amount: 0.1 }}
+                                            className="about-two__img-2">
                                             <Image src={abimg5} alt="" />
-                                        </div>
+                                        </motion.div>
                                     </div>
                                 </div>
                                 <div className="col-xl-6 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="200ms">
                                     <div className="about-two__left-img-box-2">
-                                        <div className="about-two__img-3">
+                                        <motion.div
+                                            initial={{ y: 50, opacity: 0 }}
+                                            whileInView={{ y: 0, opacity: 1 }}
+                                            transition={{
+                                                duration: 0.5,
+                                                ease: "easeOut"
+                                            }}
+                                            viewport={{ once: true, amount: 0.1 }}
+                                            className="about-two__img-3">
                                             <Image src={abimg6} alt="" />
-                                        </div>
-                                        <div className="about-two__img-4">
+                                        </motion.div>
+                                        <motion.div
+                                            initial={{ y: 50, opacity: 0 }}
+                                            whileInView={{ y: 0, opacity: 1 }}
+                                            transition={{
+                                                duration: 0.5,
+                                                ease: "easeOut"
+                                            }}
+                                            viewport={{ once: true, amount: 0.1 }}
+                                            className="about-two__img-4">
                                             <Image src={abimg7} alt="" />
-                                        </div>
+                                        </motion.div>
                                     </div>
                                 </div>
                             </div>
@@ -60,8 +96,10 @@ const AboutTow: React.FC = () => {
                                     </div>
                                     <span className="section-title__tagline">About Us</span>
                                 </div>
-                                <h2 className="section-title__title title-animation">Our Story, Mission, Born from a passion
-                                    for innovation, <span>& Values</span><br /> <span>That Drive Us Forward</span>
+                                <h2 className="section-title__title title-animation">
+                                    <TextAnimation text='Our Story, Mission, Born from a' textColor='black' />
+                                    <TextAnimation text='passion for innovation & Values' textColor='black' />
+                                    <TextAnimation text='That Drive Us Forward' />
                                 </h2>
                             </div>
                             <p className="about-two__text">We are passionate about delivering exceptional cleaning services

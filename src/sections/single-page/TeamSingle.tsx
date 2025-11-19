@@ -14,6 +14,7 @@ import teamImg6 from "../../../public/assets/images/team/team-1-4.jpg";
 import teamImg7 from "../../../public/assets/images/team/team-1-2.jpg";
 import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
+import TextAnimation from "@/components/elements/TextAnimation";
 
 // Types
 interface TeamMember {
@@ -172,11 +173,8 @@ const SectionTitle: FC = () => (
             <span className="section-title__tagline">OUR Team Member</span>
         </div>
         <h2 className="section-title__title title-animation">
-            Meet the Experts Behind Our
-            <br />
-            Success. <span>Our Dedicated Team at</span>
-            <br />
-            <span>Your Service</span>
+            <TextAnimation text="Meet the Experts Behind Our Success." textColor="black" /><br></br>
+            <TextAnimation text="Our Dedicated Team at Your Service" />
         </h2>
     </div>
 );

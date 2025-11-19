@@ -1,7 +1,8 @@
 "use client"
+import TextAnimation from '@/components/elements/TextAnimation';
 import Link from 'next/link';
 import React, { useState } from 'react';
-
+import { motion } from "framer-motion"
 const AboutThree: React.FC = () => {
     const [serviceType, setServiceType] = useState<string>("1")
     return (
@@ -19,11 +20,10 @@ const AboutThree: React.FC = () => {
                                         </div>
                                         <span className="section-title__tagline">About Us</span>
                                     </div>
-                                    <h2 className="section-title__title title-animation">Our Story, Mission, Born from a
-                                        <br />
-                                        passion
-                                        for innovation, <span>& Values</span> <br /> <span>That Drive Us
-                                            Forward</span>
+                                    <h2 className="section-title__title title-animation">
+                                        <TextAnimation text='Our Story, Mission, Born from a' textColor='black' />
+                                        <TextAnimation text='passion for innovation & Values' textColor='black' />
+                                        <TextAnimation text='That Drive Us Forward' />
                                     </h2>
                                 </div>
                                 <p className="about-three__text">We are passionate about delivering exceptional cleaning
@@ -124,8 +124,15 @@ const AboutThree: React.FC = () => {
                         </div>
                     </div>
                     <div className="col-xl-5">
-                        <div className="about-three__right wow slideInRight" data-wow-delay="100ms"
-                            data-wow-duration="2500ms">
+                        <motion.div
+                            initial={{ x: 100, opacity: 0 }}
+                            whileInView={{ x: 0, opacity: 1 }}
+                            transition={{
+                                duration: 1.8,
+                                ease: "easeOut"
+                            }}
+                            viewport={{ once: true, amount: 0.01 }}
+                            className="about-three__right" >
                             <div className="about-three__form-box">
                                 <div className="about-three__form-title-box">
                                     <h3 className="about-three__form-title">Book Online</h3>
@@ -178,7 +185,7 @@ const AboutThree: React.FC = () => {
                                 </form>
                                 <div className="result"></div>
                             </div>
-                        </div>
+                        </motion.div>
                     </div>
                 </div>
             </div>

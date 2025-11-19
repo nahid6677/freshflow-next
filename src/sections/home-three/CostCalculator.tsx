@@ -2,19 +2,29 @@
 import React from 'react';
 import costimg from "../../../public/assets/images/resources/cost-calculator-img-1.jpg"
 import Image from 'next/image';
+import TextAnimation from '@/components/elements/TextAnimation';
+import { motion } from "framer-motion"
 const CostCalculator: React.FC = () => {
     return (
         <section className="cost-calculator">
             <div className="container">
                 <div className="row">
-                    <div className="col-xl-6 wow fadeInLeft">
+                    <motion.div
+                        initial={{ x: -100, opacity: 0 }}
+                        whileInView={{ x: 0, opacity: 1 }}
+                        transition={{
+                            duration: 1.8,
+                            ease: "easeOut"
+                        }}
+                        viewport={{ once: true, amount: 0.01 }}
+                        className="col-xl-6">
                         <div className="cost-calculator__left">
                             <div className="cost-calculator__img">
                                 <Image src={costimg} alt="" />
                             </div>
                         </div>
-                    </div>
-                    <div className="col-xl-6 wow fadeInRight">
+                    </motion.div>
+                    <div className="col-xl-6">
                         <div className="cost-calculator__right">
                             <div className="cost-calculator__form-box">
                                 <div className="section-title text-left sec-title-animation animation-style2">
@@ -25,8 +35,9 @@ const CostCalculator: React.FC = () => {
                                         </div>
                                         <span className="section-title__tagline">Cost Calculator</span>
                                     </div>
-                                    <h2 className="section-title__title title-animation">Get your free
-                                        <span>estimate!</span></h2>
+                                    <h2 className="section-title__title title-animation">
+                                        <TextAnimation text='Get your free' textColor='white' />
+                                        <TextAnimation text=' estimate!' /> </h2>
                                 </div>
                                 <form className="contact-form-validated cost-calculator__form" onSubmit={(e) => e.preventDefault()}>
                                     <div className="row">
