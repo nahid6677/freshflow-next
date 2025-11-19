@@ -1,15 +1,12 @@
 "use client"
 import React, { useState, useMemo, useCallback } from "react";
-import type { FC, MouseEvent } from "react";
-import proj6 from "../../../public/assets/images/project/project-one-single-two-img-1.png";
+import type { FC } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { FilterCategory, FilterConfig, Project } from "@/types/home-one";
 import { FILTER_CONFIGS, PROJECTS_DATA } from "./Contents";
 import TextAnimation from "@/components/elements/TextAnimation";
 import { motion } from "framer-motion"
-
-const CONTACT_PHONE: string = "12 (00) 456 78910";
 
 const ProjectOne: React.FC = () => {
     const [activeFilter, setActiveFilter] = useState<FilterCategory>("All");
@@ -26,18 +23,8 @@ const ProjectOne: React.FC = () => {
         );
     }, [activeFilter]);
 
-    const shouldShowLastCard = useMemo(() => {
-        const currentConfig = FILTER_CONFIGS.find((config: FilterConfig) => config.id === activeFilter);
-        return currentConfig?.showLastCard ?? true;
-    }, [activeFilter]);
-
     const handleFilterChange = useCallback((filterId: FilterCategory) => {
         setActiveFilter(filterId);
-    }, []);
-
-    const handlePhoneClick = useCallback((e: MouseEvent<HTMLAnchorElement>) => {
-        e.preventDefault();
-        window.location.href = `tel:${CONTACT_PHONE.replace(/\s|\(|\)/g, "")}`;
     }, []);
 
     return (
@@ -60,11 +47,7 @@ const ProjectOne: React.FC = () => {
                     <div className="row filter-layout">
                         {filteredProjects.map((project) => (
                             <ProjectCard key={project.id} project={project} />
-                        ))}
-
-                        {shouldShowLastCard && (
-                            <ContactCard onPhoneClick={handlePhoneClick} />
-                        )}
+                        ))} 
                     </div>
                 </div>
             </div>
@@ -155,60 +138,6 @@ const ProjectCard: FC<ProjectCardProps> = ({ project }) => (
         </motion.div>
     </div>
 );
-
-interface ContactCardProps {
-    onPhoneClick: (e: MouseEvent<HTMLAnchorElement>) => void;
-}
-
-const ContactCard: FC<ContactCardProps> = ({ onPhoneClick }) => (
-    <motion.div
-        initial={{ y: 50, opacity: 0 }}
-        whileInView={{ y: 0, opacity: 1 }}
-        transition={{
-            duration: 0.5,
-            ease: "easeOut"
-        }}
-        viewport={{ once: true, amount: 0.1 }}
-        className="col-xl-4 col-lg-4 col-md-6"
-    >
-        <div className="project-one__single-2" >
-            <div className="project-one__single-2-img">
-                <Image src={proj6} alt="Contact us" />
-            </div>
-            <h3 className="project-one__title-2">
-                <Link href="/project-details">
-                    Do you have any project
-                    <br />
-                    ideas in mind?
-                </Link>
-            </h3>
-            <div className="project-one__view-box-2">
-                <Link href="/project-details" className="project-one__view-2">
-                    <i className="icon-diagonal-arrow"></i>
-                    <span>
-                        View More
-                        <br /> Project
-                    </span>
-                </Link>
-            </div>
-            <ul className="project-one__sliding-text-list list-unstyled marquee_mode">
-                <li>
-                    <h2
-                        data-hover="Get In Touch"
-                        className="project-one__sliding-text-title"
-                    >
-                        Get In Touch
-                    </h2>
-                </li>
-            </ul>
-            <div className="project-one__need-help">
-                <p>Need Support?</p>
-                <a href="#" onClick={onPhoneClick}>
-                    {CONTACT_PHONE}
-                </a>
-            </div>
-        </div>
-    </motion.div>
-);
+ 
 
 export default ProjectOne;

@@ -144,8 +144,8 @@ const ContactOne: React.FC = () => {
             <div className="container">
                 <div className="row">
                     < motion.div
-                        initial={{ x: -700 }}
-                        whileInView={{ x: 0 }}
+                        initial={{ x: -100, opacity: 0 }}
+                        whileInView={{ x: 0, opacity: 1 }}
                         transition={{
                             duration: 1.5,
                             ease: "easeOut"

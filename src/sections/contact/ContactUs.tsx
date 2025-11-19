@@ -4,6 +4,7 @@ import shapimg2 from "../../../public/assets/images/shapes/contact-four-contact-
 import shapimg3 from "../../../public/assets/images/shapes/contact-four-contact-list-shape-1.png";
 import Image from 'next/image';
 import ContactForm from './ContactForm';
+import TextAnimation from '@/components/elements/TextAnimation';
 // Contact information data
 interface ContactInfo {
     icon: string;
@@ -51,8 +52,8 @@ const ContactUs: React.FC = () => {
                                     <span className="section-title__tagline">Get In touch</span>
                                 </div>
                                 <h2 className="section-title__title title-animation">
-                                    Reach Out to <span>Us for </span> <br />
-                                    <span>Assistance or Inquiries</span>
+                                    <TextAnimation text='Reach Out to Us for' textColor='black' /> <br></br>
+                                    <TextAnimation text='Assistance or Inquiries' /> 
                                 </h2>
                             </div>
                             <p className="contact-four__left-text">{`We're`} Here to Help—Contact Us Today!</p>

@@ -1,16 +1,18 @@
+"use client"
 import React from 'react';
 import servimg8 from "../../../public/assets/images/shapes/why-choose-three-shape-1.png";
 import servimg9 from "../../../public/assets/images/shapes/why-choose-three-shape-2.png";
 import Image from 'next/image';
 import Link from 'next/link';
-
+import TextAnimation from '@/components/elements/TextAnimation';
+import { motion } from "framer-motion"
 interface WhyChooseItem {
     id: number;
     icon: string;
     title: string;
     description: string;
     link: string;
-    delay: string;
+    delay: number;
 }
 
 const whyChooseData: WhyChooseItem[] = [
@@ -20,7 +22,7 @@ const whyChooseData: WhyChooseItem[] = [
         title: "Booking Made Easy in Minutes",
         description: "Enjoy a hassle-free booking process with our user-friendly platform, and conveniently.",
         link: "/about",
-        delay: "100ms",
+        delay: 0.4,
     },
     {
         id: 2,
@@ -28,7 +30,7 @@ const whyChooseData: WhyChooseItem[] = [
         title: "Thorough Cleaning Tailored for You",
         description: "We provide customized cleaning solutions that address your unique needs, ensuring every",
         link: "/about",
-        delay: "200ms",
+        delay: 0.6,
     },
     {
         id: 3,
@@ -36,7 +38,7 @@ const whyChooseData: WhyChooseItem[] = [
         title: "Inspection & Satisfaction Guaranteed",
         description: "We ensure top-notch quality with detailed inspections and a commitment to your satisfaction",
         link: "/about",
-        delay: "300ms",
+        delay: 0.8,
     },
     {
         id: 4,
@@ -44,7 +46,7 @@ const whyChooseData: WhyChooseItem[] = [
         title: "Experienced Professionals at Your Door",
         description: "Enjoy a hassle-free booking process with our user-friendly platform, and conveniently.",
         link: "/about",
-        delay: "400ms",
+        delay: 1,
     },
 ];
 
@@ -68,21 +70,25 @@ const WhyChooseUs: React.FC = () => {
                         </div>
                         <span className="section-title__tagline">WHY CHOOSE US</span>
                     </div>
-                    <h2 className="section-title__title title-animation">
-                        Our Seamless Cleaning Process
-                        <br />
-                        <span>From Start to Sparkle Service</span>
+                    <h2 className="section-title__title title-custom-animation">
+                        <TextAnimation text='Our Seamless Cleaning Process' textColor='black' />
+                        <TextAnimation text='From Start to Sparkle Service' />
                     </h2>
                 </div>
 
                 <div className="why-choose-three__inner">
                     <ul className="row list-unstyled">
                         {whyChooseData.map((item) => (
-                            <li
+                            <motion.li
+                                initial={{ y: 50, opacity: 0 }}
+                                whileInView={{ y: 0, opacity: 1 }}
+                                transition={{
+                                    duration: item?.delay,
+                                    ease: "easeOut"
+                                }}
+                                viewport={{ once: true, amount: 0.1 }}
                                 key={item.id}
-                                className="col-xl-3 col-lg-6 col-md-6 wow fadeInLeft"
-                                data-wow-delay={item.delay}
-                                data-wow-duration="1500ms"
+                                className="col-xl-3 col-lg-6 col-md-6 "
                             >
                                 <div className="why-choose-three__single">
                                     <div className="why-choose-three__icon">
@@ -94,7 +100,7 @@ const WhyChooseUs: React.FC = () => {
                                     </h3>
                                     <p className="why-choose-three__text">{item.description}</p>
                                 </div>
-                            </li>
+                            </motion.li>
                         ))}
                     </ul>
                 </div>

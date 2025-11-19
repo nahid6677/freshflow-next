@@ -5,15 +5,16 @@ import awardShapeTwo from '../../../public/assets/images/shapes/award-one-shape-
 import Accordion from '../common/Accordion';
 import Image from 'next/image';
 import { accordion1, accordion2 } from './FaqContent';
+import TextAnimation from '@/components/elements/TextAnimation';
 
 
 export interface FAQ {
     id: number;
     title: string;
-    image: string; 
+    image: string;
     contentTitle: string;
     text: string;
-    calender: string; 
+    calender: string;
 }
 
 const FaqSection: React.FC = () => {
@@ -35,8 +36,11 @@ const FaqSection: React.FC = () => {
                         </div>
                         <span className="section-title__tagline">AWARDS</span>
                     </div>
-                    <h2 className="section-title__title title-animation">Celebrating Excellence. <span>Our Award</span> <br />
-                        <span>Winning Achievements!</span>
+                    <h2 className="section-title__title title-custom-animation">
+                        <TextAnimation text='Celebrating Excellence Our Award' textColor='black' />
+                        <TextAnimation text='Winning Achievements!' />
+                        <span></span> <br />
+                        <span></span>
                     </h2>
                 </div>
                 <div className="row">

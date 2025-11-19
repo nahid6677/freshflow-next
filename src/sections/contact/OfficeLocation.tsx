@@ -3,6 +3,7 @@ import location1 from "../../../public/assets/images/shapes/office-location-two-
 import location2 from "../../../public/assets/images/shapes/office-location-two-shape-2.png";
 import location3 from "../../../public/assets/images/shapes/office-location-two-shape-3.png";
 import Image from 'next/image';
+import TextAnimation from '@/components/elements/TextAnimation';
 
 // Define interfaces
 interface OfficeLocation {
@@ -66,10 +67,9 @@ const OfficeLocation: React.FC = () => {
                         </div>
                         <span className="section-title__tagline">Office Location</span>
                     </div>
-                    <h2 className="section-title__title title-animation">
-                        Find Your Suitable Area <span>to Connect </span>
-                        <br />
-                        <span>With Us Easily</span>
+                    <h2 className="section-title__title title-custom-animation">
+                        <TextAnimation text='Find Your Suitable Area to Connect' textColor='black'/> 
+                        <TextAnimation text='With Us Easily' />  
                     </h2>
                 </div>
                 <div className="office-location-two__inner">

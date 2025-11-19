@@ -65,8 +65,8 @@ const WhyChooseOne: React.FC = () => {
                                     </h2>
                                 </div>
                                 <motion.div
-                                    initial={{ x: -700 }}
-                                    whileInView={{ x: 0 }}
+                                    initial={{ x: -100, opacity: 0 }}
+                                    whileInView={{ x: 0, opacity: 1 }}
                                     transition={{
                                         duration: 1.8,
                                         ease: "easeOut"
@@ -123,8 +123,8 @@ const WhyChooseOne: React.FC = () => {
                         </div>
                         <div className="col-xl-6">
                             <motion.div
-                                initial={{ x: 700 }}
-                                whileInView={{ x: 0 }}
+                                initial={{ x: 100, opacity: 0 }}
+                                whileInView={{ x: 0, opacity: 1 }}
                                 transition={{
                                     duration: 1.8,
                                     ease: "easeOut"

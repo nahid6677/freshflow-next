@@ -1,4 +1,5 @@
 "use client"
+import TextAnimation from '@/components/elements/TextAnimation';
 import React, { type FormEvent } from 'react';
 // Define interface
 interface ContactFormData {
@@ -83,7 +84,7 @@ const ContactForm: React.FC = () => {
                     </div>
                     <span className="section-title__tagline">Contact US</span>
                 </div>
-                <h2 className="section-title__title title-animation">Send Message</h2>
+                <h2 className="section-title__title title-animation"><TextAnimation text='Send Message' textColor='black'/> </h2>
             </div>
             <form className="contact-form-validated contact-four__form" onSubmit={handleContactInfo}>
                 <div className="row">

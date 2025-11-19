@@ -1,10 +1,11 @@
 
+"use client"
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import footerImg1 from "../../../public/assets/images/shapes/site-footer-two-shape-1.png";
 import footerImg2 from "../../../public/assets/images/resources/site-footer-logo-1.png";
-
+import { motion } from "framer-motion"
 const FooterInner: React.FC = () => {
     return (
         <footer className="site-footer-two">
@@ -60,9 +61,19 @@ const FooterInner: React.FC = () => {
                                     <div className="site-footer-two__widget-box">
                                         <div className="row">
                                             <div className="col-xl-4 col-lg-4 col-md-4 wow fadeInUp" data-wow-delay="100ms">
-                                                <div className="footer-widget-two__quick-links">
+                                                <motion.div
+                                                    initial={{ y: 50, opacity: 0 }}
+                                                    whileInView={{ y: 0, opacity: 1 }}
+                                                    transition={{
+                                                        duration: 0.5,
+                                                        ease: "easeOut"
+                                                    }}
+                                                    viewport={{ once: true, amount: 0.1 }}
+                                                    className="footer-widget-two__quick-links">
                                                     <h4 className="footer-widget-two__title">Quick Links</h4>
-                                                    <ul className="footer-widget-two__quick-links-list list-unstyled">
+                                                    <ul
+
+                                                        className="footer-widget-two__quick-links-list list-unstyled">
                                                         <li>
                                                             <Link href="/">
                                                                 <span className="icon-next"></span> Home
@@ -89,10 +100,18 @@ const FooterInner: React.FC = () => {
                                                             </Link>
                                                         </li>
                                                     </ul>
-                                                </div>
+                                                </motion.div>
                                             </div>
                                             <div className="col-xl-4 col-lg-4 col-md-4 wow fadeInUp" data-wow-delay="200ms">
-                                                <div className="footer-widget-two__essential-links">
+                                                <motion.div
+                                                    initial={{ y: 50, opacity: 0 }}
+                                                    whileInView={{ y: 0, opacity: 1 }}
+                                                    transition={{
+                                                        duration: 0.5,
+                                                        ease: "easeOut"
+                                                    }}
+                                                    viewport={{ once: true, amount: 0.1 }}
+                                                    className="footer-widget-two__essential-links">
                                                     <h4 className="footer-widget-two__title">Essential</h4>
                                                     <ul className="footer-widget-two__quick-links-list list-unstyled">
                                                         <li>
@@ -121,10 +140,18 @@ const FooterInner: React.FC = () => {
                                                             </Link>
                                                         </li>
                                                     </ul>
-                                                </div>
+                                                </motion.div>
                                             </div>
                                             <div className="col-xl-4 col-lg-4 col-md-4 wow fadeInUp" data-wow-delay="300ms">
-                                                <div className="footer-widget-two__services-links">
+                                                <motion.div
+                                                    initial={{ y: 50, opacity: 0 }}
+                                                    whileInView={{ y: 0, opacity: 1 }}
+                                                    transition={{
+                                                        duration: 0.5,
+                                                        ease: "easeOut"
+                                                    }}
+                                                    viewport={{ once: true, amount: 0.1 }}
+                                                    className="footer-widget-two__services-links">
                                                     <h4 className="footer-widget-two__title">Our Services</h4>
                                                     <ul className="footer-widget-two__quick-links-list list-unstyled">
                                                         <li>
@@ -153,7 +180,7 @@ const FooterInner: React.FC = () => {
                                                             </Link>
                                                         </li>
                                                     </ul>
-                                                </div>
+                                                </motion.div>
                                             </div>
                                         </div>
                                     </div>

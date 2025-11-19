@@ -1,15 +1,11 @@
 "use client"
 import React, { useState, useMemo, useCallback } from "react";
-import type { FC, MouseEvent } from "react";
-import proj6 from "../../../public/assets/images/project/project-one-single-two-img-1.png";
+import type { FC } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { FilterCategory, FilterConfig, Project } from "@/types/home-one";
 import { FILTER_CONFIGS, PROJECTS_DATA } from "../home-one/Contents";
 
-
-
-const CONTACT_PHONE: string = "12 (00) 456 78910";
 
 const ProjectSingle: React.FC = () => {
     const [activeFilter, setActiveFilter] = useState<FilterCategory>("All");
@@ -25,21 +21,9 @@ const ProjectSingle: React.FC = () => {
             currentConfig.filterNames.includes(project.filterName)
         );
     }, [activeFilter]);
-
-    const shouldShowLastCard = useMemo(() => {
-        const currentConfig = FILTER_CONFIGS.find((config: FilterConfig) => config.id === activeFilter);
-        return currentConfig?.showLastCard ?? true;
-    }, [activeFilter]);
-
     const handleFilterChange = useCallback((filterId: FilterCategory) => {
         setActiveFilter(filterId);
     }, []);
-
-    const handlePhoneClick = useCallback((e: MouseEvent<HTMLAnchorElement>) => {
-        e.preventDefault();
-        window.location.href = `tel:${CONTACT_PHONE.replace(/\s|\(|\)/g, "")}`;
-    }, []);
-
     return (
         <section className="project-one" id="project">
             <div className="project-one__bg-shape"></div>
@@ -61,10 +45,6 @@ const ProjectSingle: React.FC = () => {
                         {filteredProjects.map((project) => (
                             <ProjectCard key={project.id} project={project} />
                         ))}
-
-                        {shouldShowLastCard && (
-                            <ContactCard onPhoneClick={handlePhoneClick} />
-                        )}
                     </div>
                 </div>
             </div>
@@ -140,52 +120,6 @@ const ProjectCard: FC<ProjectCardProps> = ({ project }) => (
                 <h3 className="project-one__title">
                     <Link href="/project-details">{project.title}</Link>
                 </h3>
-            </div>
-        </div>
-    </div>
-);
-
-interface ContactCardProps {
-    onPhoneClick: (e: MouseEvent<HTMLAnchorElement>) => void;
-}
-
-const ContactCard: FC<ContactCardProps> = ({ onPhoneClick }) => (
-    <div className="col-xl-4 col-lg-4 col-md-6">
-        <div className="project-one__single-2" >
-            <div className="project-one__single-2-img">
-                <Image src={proj6} alt="Contact us" />
-            </div>
-            <h3 className="project-one__title-2">
-                <Link href="/project-details">
-                    Do you have any project
-                    <br />
-                    ideas in mind?
-                </Link>
-            </h3>
-            <div className="project-one__view-box-2">
-                <Link href="/project-details" className="project-one__view-2">
-                    <i className="icon-diagonal-arrow"></i>
-                    <span>
-                        View More
-                        <br /> Project
-                    </span>
-                </Link>
-            </div>
-            <ul className="project-one__sliding-text-list list-unstyled marquee_mode">
-                <li>
-                    <h2
-                        data-hover="Get In Touch"
-                        className="project-one__sliding-text-title"
-                    >
-                        Get In Touch
-                    </h2>
-                </li>
-            </ul>
-            <div className="project-one__need-help">
-                <p>Need Support?</p>
-                <a href="#" onClick={onPhoneClick}>
-                    {CONTACT_PHONE}
-                </a>
             </div>
         </div>
     </div>

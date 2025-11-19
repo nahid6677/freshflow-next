@@ -1,3 +1,4 @@
+"use client"
 import React from 'react'
 import abimg1 from '../../../public/assets/images/shapes/about-two-shape-1.png'
 import abimg2 from "../../../public/assets/images/shapes/about-two-shape-2.png"
@@ -22,7 +23,8 @@ import abimg20 from "../../../public/assets/images/shapes/process-one-single-sha
 import Image from 'next/image'
 import AdvanceCountUp from '@/components/elements/AdvanceCountUp'
 import Link from 'next/link'
-
+import TextAnimation from '@/components/elements/TextAnimation'
+import { motion } from "framer-motion"
 const SectionOne: React.FC = () => {
     return (
         <>
@@ -44,22 +46,55 @@ const SectionOne: React.FC = () => {
                                 <div className="row">
                                     <div className="col-xl-6 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="100ms">
                                         <div className="about-two__left-img-box">
-                                            <div className="about-two__img-1">
-                                                <Image src={abimg4} alt=""   />
-                                            </div>
-                                            <div className="about-two__img-2">
-                                                <Image src={abimg5} alt=""  />
-                                            </div>
+                                            <motion.div
+                                                initial={{ y: 50, opacity: 0 }}
+                                                whileInView={{ y: 0, opacity: 1 }}
+                                                transition={{
+                                                    duration: 0.5,
+                                                    ease: "easeOut"
+                                                }}
+                                                viewport={{ once: true, amount: 0.1 }}
+                                                className="about-two__img-1">
+                                                <Image src={abimg4} alt="" />
+                                            </motion.div>
+
+                                            <motion.div
+                                                initial={{ y: 50, opacity: 0 }}
+                                                whileInView={{ y: 0, opacity: 1 }}
+                                                transition={{
+                                                    duration: 0.5,
+                                                    ease: "easeOut"
+                                                }}
+                                                viewport={{ once: true, amount: 0.1 }}
+                                                className="about-two__img-2">
+                                                <Image src={abimg5} alt="" />
+                                            </motion.div>
                                         </div>
                                     </div>
                                     <div className="col-xl-6 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="200ms">
                                         <div className="about-two__left-img-box-2">
-                                            <div className="about-two__img-3">
-                                                <Image src={abimg6} alt=""   />
-                                            </div>
-                                            <div className="about-two__img-4">
+                                            <motion.div
+                                                initial={{ y: 50, opacity: 0 }}
+                                                whileInView={{ y: 0, opacity: 1 }}
+                                                transition={{
+                                                    duration: 0.5,
+                                                    ease: "easeOut"
+                                                }}
+                                                viewport={{ once: true, amount: 0.1 }}
+                                                className="about-two__img-3">
+                                                <Image src={abimg6} alt="" />
+                                            </motion.div>
+                                            <motion.div
+                                                initial={{ y: 50, opacity: 0 }}
+                                                whileInView={{ y: 0, opacity: 1 }}
+                                                transition={{
+                                                    duration: 0.5,
+                                                    ease: "easeOut"
+                                                }}
+                                                viewport={{ once: true, amount: 0.1 }}
+                                                className="about-two__img-4">
                                                 <Image src={abimg7} alt="" />
-                                            </div>
+                                            </motion.div>
                                         </div>
                                     </div>
                                 </div>
@@ -75,8 +110,10 @@ const SectionOne: React.FC = () => {
                                         </div>
                                         <span className="section-title__tagline">About Us</span>
                                     </div>
-                                    <h2 className="section-title__title title-animation">Our Story, Mission, Born from a passion
-                                        for innovation, <span>& Values</span><br /> <span>That Drive Us Forward</span>
+                                    <h2 className="section-title__title title-animation">
+                                        <TextAnimation text='Our Story, Mission, Born from a' textColor='black' />
+                                        <TextAnimation text='passion for innovation & Values' textColor='black' />
+                                        <TextAnimation text='That Drive Us Forward' />
                                     </h2>
                                 </div>
                                 <p className="about-two__text">We are passionate about delivering exceptional cleaning services
@@ -259,8 +296,11 @@ const SectionOne: React.FC = () => {
                                         </div>
                                         <span className="section-title__tagline">Why Choose US</span>
                                     </div>
-                                    <h2 className="section-title__title title-animation">Why Choose Us? Pristine Spaces,
-                                        Unmatched Dedication!
+                                    <h2 className="section-title__title title-animation">
+                                        <TextAnimation text='Why Choose Us? Pristine Spaces,' textColor='white' />
+                                        <TextAnimation text='Unmatched Dedication!' textColor='white' />
+
+
                                     </h2>
                                 </div>
                                 <p className="why-choose-four__text">With a passion for cleanliness and a commitment to
@@ -355,8 +395,9 @@ const SectionOne: React.FC = () => {
                             </div>
                             <span className="section-title__tagline">Working Process</span>
                         </div>
-                        <h2 className="section-title__title title-animation">Our Seamless Cleaning Process
-                            <span>From</span><br /><span>Start to Sparkle Service</span>
+                        <h2 className="section-title__title title-custom-animation">
+                            <TextAnimation text='Our Seamless Cleaning Process From' textColor='black' />
+                            <TextAnimation text='Start to Sparkle Service' />
                         </h2>
                     </div>
                     <div className="process-one__inner">
@@ -364,17 +405,26 @@ const SectionOne: React.FC = () => {
                             {/*Process One Single Start*/}
                             <li className="col-xl-3 col-lg-6 col-md-6">
                                 <div className="process-one__single">
-                                    <div className="process-one__single-shape-1">
-                                        <Image src={abimg17} alt="" width={323} height={35}/>
+                                    <div
+                                        className="process-one__single-shape-1">
+                                        <Image src={abimg17} alt="" width={323} height={35} />
                                     </div>
                                     <h3 className="process-one__title">Apply Now</h3>
                                     <p className="process-one__text">Enjoy a hassle-free booking process<br /> with our
                                         user-friendly
                                         platform, and<br /> conveniently.</p>
-                                    <div className="process-one__icon">
+                                    <motion.div
+                                        initial={{ y: 50, opacity: 0 }}
+                                        whileInView={{ y: 0, opacity: 1 }}
+                                        transition={{
+                                            duration: 0.5,
+                                            ease: "easeOut"
+                                        }}
+                                        viewport={{ once: true, amount: 0.1 }}
+                                        className="process-one__icon">
                                         <span className="icon-time"></span>
                                         <div className="process-one__count"></div>
-                                    </div>
+                                    </motion.div>
                                 </div>
                             </li>
                             {/*Process One Single End*/}
@@ -382,16 +432,24 @@ const SectionOne: React.FC = () => {
                             <li className="col-xl-3 col-lg-6 col-md-6">
                                 <div className="process-one__single">
                                     <div className="process-one__single-shape-1">
-                                        <Image src={abimg18} alt="" width={323}/>
+                                        <Image src={abimg18} alt="" width={323} />
                                     </div>
                                     <h3 className="process-one__title">Fix The Date</h3>
                                     <p className="process-one__text">We provide customized cleaning <br />solutions that address
                                         your
                                         unique<br /> needs, ensuring every</p>
-                                    <div className="process-one__icon">
+                                    <motion.div
+                                        initial={{ y: 50, opacity: 0 }}
+                                        whileInView={{ y: 0, opacity: 1 }}
+                                        transition={{
+                                            duration: 0.5,
+                                            ease: "easeOut"
+                                        }}
+                                        viewport={{ once: true, amount: 0.1 }}
+                                        className="process-one__icon">
                                         <span className="icon-cleaning-1"></span>
                                         <div className="process-one__count"></div>
-                                    </div>
+                                    </motion.div>
                                 </div>
                             </li>
                             {/*Process One Single End*/}
@@ -399,16 +457,24 @@ const SectionOne: React.FC = () => {
                             <li className="col-xl-3 col-lg-6 col-md-6">
                                 <div className="process-one__single">
                                     <div className="process-one__single-shape-1">
-                                        <Image src={abimg19} alt="" width={323}/>
+                                        <Image src={abimg19} alt="" width={323} />
                                     </div>
                                     <h3 className="process-one__title">As Soon Hire Us</h3>
                                     <p className="process-one__text">We ensure top-notch quality with <br />detailed inspections
                                         and a<br />
                                         commitment to your satisfaction</p>
-                                    <div className="process-one__icon">
+                                    <motion.div
+                                        initial={{ y: 50, opacity: 0 }}
+                                        whileInView={{ y: 0, opacity: 1 }}
+                                        transition={{
+                                            duration: 0.5,
+                                            ease: "easeOut"
+                                        }}
+                                        viewport={{ once: true, amount: 0.1 }}
+                                        className="process-one__icon">
                                         <span className="icon-kitchen"></span>
                                         <div className="process-one__count"></div>
-                                    </div>
+                                    </motion.div>
                                 </div>
                             </li>
                             {/*Process One Single End*/}
@@ -422,10 +488,18 @@ const SectionOne: React.FC = () => {
                                     <p className="process-one__text">Enjoy a hassle-free booking process<br /> with our
                                         user-friendly
                                         platform, and<br /> conveniently.</p>
-                                    <div className="process-one__icon">
+                                    <motion.div
+                                        initial={{ y: 50, opacity: 0 }}
+                                        whileInView={{ y: 0, opacity: 1 }}
+                                        transition={{
+                                            duration: 0.5,
+                                            ease: "easeOut"
+                                        }}
+                                        viewport={{ once: true, amount: 0.1 }}
+                                        className="process-one__icon">
                                         <span className="icon-vacuum"></span>
                                         <div className="process-one__count"></div>
-                                    </div>
+                                    </motion.div>
                                 </div>
                             </li>
                             {/*Process One Single End*/}

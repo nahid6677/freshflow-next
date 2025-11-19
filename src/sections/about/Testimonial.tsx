@@ -4,6 +4,7 @@ import aboutSec12 from '../../../public/assets/images/shapes/testimonial-two-sha
 import aboutSec13 from '../../../public/assets/images/shapes/testimonial-two-shape-2.png';
 import Image from 'next/image';
 import TestimonialSlider from '@/components/elements/TestimonialSlider';
+import TextAnimation from '@/components/elements/TextAnimation';
 
 
 const Testimonial: React.FC = () => {
@@ -28,9 +29,8 @@ const Testimonial: React.FC = () => {
                             <span className="section-title__tagline">Testimonial</span>
                         </div>
                         <h2 className="section-title__title title-animation">
-                            Hear from our <span>satisfied</span> <br />
-                            <span>clients who praise</span>
-                        </h2>
+                            <TextAnimation text='Hear from our satisfied' textColor='black' />
+                            <TextAnimation text='clients who praise' /> </h2>
                     </div>
                     <TestimonialSlider />
                 </div>

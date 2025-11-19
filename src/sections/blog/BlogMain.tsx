@@ -4,7 +4,8 @@ import Link from 'next/link';
 import React, { useState } from 'react';
 import { Allblogs } from './blogContent';
 import { Blog } from '@/types/home-one';
-
+import TextAnimation from '@/components/elements/TextAnimation';
+import { motion } from "framer-motion"
 const BlogMain: React.FC = () => {
     const [currentPage, setCurrentPage] = useState(1);
     const itemsPerPage = 8;
@@ -33,9 +34,9 @@ const BlogMain: React.FC = () => {
                             </div>
                             <span className="section-title__tagline">OUR INSIGHT</span>
                         </div>
-                        <h2 className="section-title__title title-animation">
-                            Discover Insights and <span>Tips </span> <br />
-                            <span>in Our Latest Articles</span>
+                        <h2 className="section-title__title ">
+                            <TextAnimation text='Discover Insights and Tips' textColor='black' /> <br></br>
+                            <TextAnimation text='in Our Latest Articles' />
                         </h2>
                     </div>
                     <div className="blog-one__btn-box">
@@ -43,13 +44,20 @@ const BlogMain: React.FC = () => {
                             View All Blogs<span><i className="icon-diagonal-arrow"></i></span>
                         </Link>
                     </div>
-                </div>
+                </div>  
                 <div className="blog-one__bottom">
                     <div className="row">
                         {currentBlogs.map((item: Blog, i) => {
                             return (
-                                <div key={i} className="col-xl-3 col-lg-6 col-md-6 wow fadeInLeft"
-                                    data-wow-delay="0ms" data-wow-duration="1500ms">
+                                <motion.div
+                                    initial={{ x: (i + 1) % 2 === 0 ? 10 : -10, opacity: 0 }}
+                                    whileInView={{ x: 0, opacity: 1 }}
+                                    transition={{
+                                        duration: 0.5,
+                                        ease: "easeOut"
+                                    }}
+                                    viewport={{ once: true, amount: 0.1 }}
+                                    key={i} className="col-xl-3 col-lg-6 col-md-6 " >
                                     <div className="blog-one__single">
                                         <div className="blog-one__img-box">
                                             <div className="blog-one__img">
@@ -71,7 +79,7 @@ const BlogMain: React.FC = () => {
                                             <p className="blog-one__text">{item?.text}</p>
                                         </div>
                                     </div>
-                                </div>
+                                </motion.div>
                             );
                         })}
                     </div>

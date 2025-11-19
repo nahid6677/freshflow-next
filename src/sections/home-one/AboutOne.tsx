@@ -34,15 +34,17 @@ const AboutOne: React.FC = () => {
                 <div className="about-one__shape-2"></div>
                 <div className="container">
                     <div className="row">
-                        <div className="col-xl-6">
+                        <motion.div
+                            initial={{ x: -100, opacity: 0 }}
+                            whileInView={{ x: 0, opacity: 1 }}
+                            transition={{
+                                duration: 1.8,
+                                ease: "easeOut"
+                            }}
+                            viewport={{ once: true, amount: 0.1 }}
+                            className="col-xl-6" >
                             <motion.div
-                                initial={{ x: -700, opacity: 0 }}
-                                whileInView={{ x: 0, opacity: 1 }}
-                                transition={{
-                                    duration: 1.8,
-                                    ease: "easeOut"
-                                }}
-                                viewport={{ once: true, amount: 0.1 }}
+
                                 className="about-one__left "
                             >
                                 <div className="row">
@@ -101,7 +103,7 @@ const AboutOne: React.FC = () => {
                             >
                                 Freshflow
                             </h2>
-                        </div>
+                        </motion.div>
                         <div className="col-xl-6">
                             <div
                                 className="about-one__right wow fadeInRight"
@@ -117,9 +119,9 @@ const AboutOne: React.FC = () => {
                                         <span className="section-title__tagline">About Us</span>
                                     </div>
                                     <h2 className="section-title__title title-animation">
-                                        <TextAnimation text='Crafting Dreams, Guided by' textColor='black'/>
-                                        <TextAnimation text='Purpose, Rooted in Creativity,' textColor='black'/>
-                                        <TextAnimation text='& Values That Define Our Journey' textColor=''/> 
+                                        <TextAnimation text='Crafting Dreams, Guided by' textColor='black' />
+                                        <TextAnimation text='Purpose, Rooted in Creativity,' textColor='black' />
+                                        <TextAnimation text='& Values That Define Our Journey' textColor='' />
                                     </h2>
                                 </div>
                                 <p className="about-one__text">

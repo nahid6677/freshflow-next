@@ -19,7 +19,7 @@ const BlogOne: React.FC = () => {
                             <span className="section-title__tagline">OUR INSIGHT</span>
                         </div>
                         <h2 className="section-title__title title-animation">
-                            <TextAnimation text='Discover Insights and Tips' textColor='black' />
+                            <TextAnimation text='Discover Insights and Tips' textColor='black' /><br></br>
                             <TextAnimation text='in Our Latest Articles' />
                         </h2>
                     </div>

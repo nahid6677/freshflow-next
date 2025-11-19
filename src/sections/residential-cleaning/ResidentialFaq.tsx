@@ -3,9 +3,10 @@ import React, { useState } from 'react';
 import faqimg1 from "../../../public/assets/images/shapes/faq-one-shape-1.png"
 import faqimg2 from "../../../public/assets/images/resources/faq-one-contact-img.png"
 import Image from 'next/image';
-import Link from 'next/link'; 
+import Link from 'next/link';
 import AccorditionItemFaq from '@/components/elements/AccorditionItemFaq';
 import { accordionItems1 } from '../home-tow/contents';
+import TextAnimation from '@/components/elements/TextAnimation';
 const ResidentialFaq: React.FC = () => {
     const [activeAcc, setActiveAcc] = useState<number | null>(2);
 
@@ -33,8 +34,10 @@ const ResidentialFaq: React.FC = () => {
                                     </div>
                                     <span className="section-title__tagline">FAQs</span>
                                 </div>
-                                <h2 className="section-title__title title-animation">Your Questions Answered <br />
-                                    <span>Explore Our FAQs</span></h2>
+                                <h2 className="section-title__title title-animation">
+                                    <TextAnimation text='Your Questions Answered' textColor='black' />
+                                    <TextAnimation text='Explore Our FAQs' />
+                                </h2>
                             </div>
                             <p className="faq-one__text">Everything you need to know. Detailed <br /> overview of our
                                 frequently asked questions</p>

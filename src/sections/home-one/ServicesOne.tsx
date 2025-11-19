@@ -64,8 +64,8 @@ const ServicesOne: React.FC = () => {
                     <div className="row">
                         <div className="col-xl-5">
                             <motion.div
-                                initial={{ x: -700 }}
-                                whileInView={{ x: 0 }}
+                                initial={{ x: -100, opacity: 0 }}
+                                whileInView={{ x: 0, opacity: 1 }}
                                 transition={{
                                     duration: 1.8,
                                     ease: "easeOut"

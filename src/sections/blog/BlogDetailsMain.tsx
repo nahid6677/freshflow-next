@@ -15,6 +15,7 @@ import comment1_4 from '../../../public/assets/images/blog/comment-1-4.jpg';
 import Link from 'next/link';
 import Image, { StaticImageData } from 'next/image';
 import BlogDetailsRight from './BlogDetailsRight';
+import TextAnimation from '@/components/elements/TextAnimation';
 
 // Define interfaces
 interface CommentFormData {
@@ -362,7 +363,7 @@ const BlogDetailsMain: React.FC = () => {
                                             </div>
                                             <span className="section-title__tagline">BLOG COMMENTS</span>
                                         </div>
-                                        <h2 className="section-title__title title-animation">Total 120 Comments</h2>
+                                        <h2 className="section-title__title title-animation"><TextAnimation text='Total 120 Comments' textColor='black'/></h2>
                                     </div>
                                     <ul className="comment-one__single-list list-unstyled">
                                         {comments.map(comment => renderComment(comment))}

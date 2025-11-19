@@ -1,3 +1,4 @@
+"use client"
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -11,7 +12,7 @@ import workerImg7 from "../../../public/assets/images/team/team-1-7.jpg"
 import workerImg8 from "../../../public/assets/images/team/team-1-8.jpg"
 import team1 from "../../../public/assets/images/shapes/team-one-shape-1.png"
 import team2 from "../../../public/assets/images/shapes/team-one-shape-2.png"
-
+import { motion } from "framer-motion"
 interface TeamWorker {
     image: string;
     teamTitle: string;
@@ -66,7 +67,7 @@ const teamWorker: TeamWorker[] = [
     },
 ];
 
-const TeamMenber = () => {
+const TeamMenber: React.FC = () => {
     return (
         <section className="team-one team-page">
             <div className="team-one__shape-1 float-bob-y">
@@ -82,7 +83,15 @@ const TeamMenber = () => {
                     {
                         teamWorker.map((item: TeamWorker, index) => (
                             <div key={index} className="col-xl-3 col-lg-6 col-md-6">
-                                <div className="team-one__single">
+                                <motion.div
+                                    initial={{ x: 50, opacity: 0 }}
+                                    whileInView={{ x: 0, opacity: 1 }}
+                                    transition={{
+                                        duration: 0.5,
+                                        ease: "easeOut"
+                                    }}
+                                    viewport={{ once: true, amount: 0.1 }}
+                                    className="team-one__single">
                                     <div className="team-one__img-box">
                                         <div className="team-one__img">
                                             <Image src={item.image} alt="" width={300} height={400} />
@@ -112,7 +121,7 @@ const TeamMenber = () => {
                                             <Link href={"/team-details"}><span className="icon-diagonal-arrow"></span></Link>
                                         </div>
                                     </div>
-                                </div>
+                                </motion.div>
                             </div>
                         ))
                     }

@@ -16,6 +16,7 @@ import 'swiper/css/navigation';
 import Image from 'next/image';
 import AdvanceCountUp from '@/components/elements/AdvanceCountUp';
 import VideoPopup from '@/components/elements/VideoPopup';
+import TextAnimation from '@/components/elements/TextAnimation';
 
 interface OfficeImage {
     src: string;
@@ -61,8 +62,9 @@ const TeamGallery: React.FC = () => {
                             </div>
                             <span className="section-title__tagline">OFFICE GALLERY</span>
                         </div>
-                        <h2 className="section-title__title title-animation">Discover Our Office and<br />
-                            <span>Explore our Creativity</span>
+                        <h2 className="section-title__title title-custom-animation">
+                            <TextAnimation text='Discover Our Office and' textColor='black'/>
+                            <TextAnimation text='Explore our Creativity'/> 
                         </h2>
                     </div>
                     <div className="row">

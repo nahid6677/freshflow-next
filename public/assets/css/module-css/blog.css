@@ -66,8 +66,7 @@
 
 .blog-one__single {
     position: relative;
-    display: block;
-    margin: 0 7px 7px 27px;
+    display: block; 
 }
 
 .blog-one__img-box {

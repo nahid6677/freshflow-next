@@ -66,6 +66,14 @@ export const PROJECTS_DATA: Project[] = [
         title: "Neat Nest Pros",
         imgURL: proj5,
     },
+    {
+        id: "project-6",
+        filterName: "Pure",
+        tag1: "Commercial",
+        tag2: "November 24",
+        title: "Pure Clean Solutions",
+        imgURL: proj2,
+    },
 ];
 
 
@@ -113,6 +121,7 @@ export const FILTER_CONFIGS: FilterConfig[] = [
         filterNames: ["Sparkle", "Eco"],
         showLastCard: true,
     },
+
 ];
 
 //testimonials

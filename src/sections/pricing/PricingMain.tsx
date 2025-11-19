@@ -7,6 +7,7 @@ import Image from 'next/image';
 import PricingCard from '@/components/elements/PricingCard';
 import { pricingContent, pricingContentTow } from '../home-tow/contents';
 import { PricingItem } from '@/types/home-tow';
+import TextAnimation from '@/components/elements/TextAnimation';
 const PricingMain: React.FC = () => {
     const [isPricing, setPricing] = useState<boolean>(false);
     return (
@@ -27,9 +28,9 @@ const PricingMain: React.FC = () => {
                         </div>
                         <span className="section-title__tagline">Plans & Pricing</span>
                     </div>
-                    <h2 className="section-title__title title-animation">
-                        Explore Our Affordable and Flexible <br /> Pricing
-                        <span>Options Tailored for You </span>
+                    <h2 className="section-title__title title-custom-animation" >
+                        <TextAnimation text='Explore Our Affordable and' textColor='black' />
+                        <TextAnimation text='Flexible Pricing Options' />
                     </h2>
                 </div>
                 <div className="pricing-two__inner">

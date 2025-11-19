@@ -6,6 +6,7 @@ import pricimg3 from "../../../public/assets/images/shapes/pricing-two-discount-
 import Image from 'next/image';
 import { pricingContent, pricingContentTow } from '../home-tow/contents';
 import PricingCard from '@/components/elements/PricingCard';
+import TextAnimation from '@/components/elements/TextAnimation';
 const PlansAndPricing: React.FC = () => {
     const [isPricing, setPricing] = useState<boolean>(false);
     return (
@@ -26,9 +27,9 @@ const PlansAndPricing: React.FC = () => {
                         </div>
                         <span className="section-title__tagline">Plans & Pricing</span>
                     </div>
-                    <h2 className="section-title__title title-animation">
-                        Explore Our Affordable and Flexible <br /> Pricing
-                        <span>Options Tailored for You </span>
+                    <h2 className="section-title__title title-custom-animation">
+                        <TextAnimation text='Explore Our Affordable and Flexible Pricing' textColor='black'/>
+                        <TextAnimation text='Options Tailored for You'/> 
                     </h2>
                 </div>
                 <div className="pricing-two__inner">

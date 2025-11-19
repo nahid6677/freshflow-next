@@ -3,6 +3,7 @@ import aboutSec1 from '../../../public/assets/images/shapes/team-one-shape-1.png
 import aboutSec2 from '../../../public/assets/images/shapes/team-one-shape-2.png';
 import React from 'react';
 import TeamSlider from '@/components/elements/TeamSlider';
+import TextAnimation from '@/components/elements/TextAnimation';
 
 const Team = () => {
     return (
@@ -25,11 +26,8 @@ const Team = () => {
                         <span className="section-title__tagline">OUR Team Member</span>
                     </div>
                     <h2 className="section-title__title title-animation">
-                        Meet the Experts Behind Our
-                        <br />
-                        Success. <span>Our Dedicated Team at</span>
-                        <br />
-                        <span>Your Service</span>
+                        <TextAnimation text='Meet the Experts Behind Our Success.'textColor='black' />
+                        <TextAnimation text='Our Dedicated Team at Your Service' /> 
                     </h2>
                 </div>
                 <TeamSlider />

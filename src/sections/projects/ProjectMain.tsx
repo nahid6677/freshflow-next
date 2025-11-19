@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ProjectItem } from "@/types/prijects";
 import { fixProject } from "./ProjectContent";
-
+import { motion } from "framer-motion"
 const ProjectsMain: React.FC = () => {
     const [currentPage, setCurrentPage] = useState(1);
     const itemsPerPage = 6;
@@ -27,7 +27,15 @@ const ProjectsMain: React.FC = () => {
                     <div className="row">
                         {currentProjects.map((item: ProjectItem, index) => (
                             <div key={`proj-${index}`} className="col-xl-4 col-lg-4 col-md-6">
-                                <div className="project-one__single">
+                                <motion.div
+                                    initial={{ y: 50, opacity: 0 }}
+                                    whileInView={{ y: 0, opacity: 1 }}
+                                    transition={{
+                                        duration: 0.5,
+                                        ease: "easeOut"
+                                    }}
+                                    viewport={{ once: true, amount: 0.1 }}
+                                    className="project-one__single">
                                     <div className="project-one__img-box">
                                         <div className="project-one__img">
                                             <Image
@@ -55,7 +63,7 @@ const ProjectsMain: React.FC = () => {
                                             <Link href="/project-details">{item.title}</Link>
                                         </h3>
                                     </div>
-                                </div>
+                                </motion.div>
                             </div>
                         ))}
 

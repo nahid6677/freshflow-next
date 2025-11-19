@@ -211,13 +211,13 @@ const Banner: React.FC = () => {
                         <div className="banner-one__right">
                             <div className="banner-one__img-box">
                                 <motion.div
-                                    initial={{ x: 700 }}
-                                    whileInView={{ x: 0 }}
+                                    initial={{ x: 100, opacity: 0 }}
+                                    whileInView={{ x: 0, opacity: 1 }}
                                     transition={{
                                         duration: 1.8,
                                         ease: "easeOut"
                                     }}
-                                    viewport={{ once: true, amount: 0.1 }}
+                                    viewport={{ once: true, amount: 0.01 }}
                                     className="banner-one__img wow slideInRight"
                                 >
                                     <Image
