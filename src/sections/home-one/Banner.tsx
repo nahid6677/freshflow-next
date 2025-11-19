@@ -11,7 +11,7 @@ import satisfiedPartner1 from '../../../public/assets/images/resources/banner-on
 import satisfiedPartner2 from '../../../public/assets/images/resources/banner-one-satisfied-partner-1-2.jpg';
 import satisfiedPartner3 from '../../../public/assets/images/resources/banner-one-satisfied-partner-1-3.jpg';
 import googleRatingImg from '../../../public/assets/images/resources/banner-one-google-rating-img.png';
-
+import { motion } from "framer-motion"
 const Banner: React.FC = () => {
     const [typedText, setTypedText] = useState<string>('');
     const [currentStringIndex, setCurrentStringIndex] = useState<number>(0);
@@ -210,18 +210,27 @@ const Banner: React.FC = () => {
                     <div className="col-xl-6">
                         <div className="banner-one__right">
                             <div className="banner-one__img-box">
-                                <div className="banner-one__img wow slideInRight">
+                                <motion.div
+                                    initial={{ x: 700 }}
+                                    whileInView={{ x: 0 }}
+                                    transition={{
+                                        duration: 1.8,
+                                        ease: "easeOut"
+                                    }}
+                                    viewport={{ once: true, amount: 0.1 }}
+                                    className="banner-one__img wow slideInRight"
+                                >
                                     <Image
                                         src={bannerImg1}
                                         alt="Cleaning service professional"
                                         priority
                                         style={{
-                                            maxWidth: '100%',
-                                            height: 'auto',
-                                            objectFit: 'contain'
+                                            maxWidth: "100%",
+                                            height: "auto",
+                                            objectFit: "contain"
                                         }}
                                     />
-                                </div>
+                                </motion.div>
                                 <div className="banner-one__google-rating">
                                     <div className="banner-one__google-rating-img">
                                         <Image

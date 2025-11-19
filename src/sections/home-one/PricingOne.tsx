@@ -8,6 +8,7 @@ import pricing2 from "../../../public/assets/images/shapes/pricing-one-discount-
 import pricing3 from "../../../public/assets/images/shapes/pricing-one-tab-content-shape-1.png"
 import pricing4 from "../../../public/assets/images/shapes/pricing-one-tab-content-shape-2.png"
 import bgImg from '../../../public/assets/images/shapes/pricing-one-shape-bg-2.png'
+import TextAnimation from '@/components/elements/TextAnimation';
 
 type Package = 'weekly' | 'monthly' | 'yearly'
 
@@ -45,8 +46,9 @@ const PricingOne: React.FC = () => {
                         </div>
                         <span className="section-title__tagline">Plans & Pricing</span>
                     </div>
-                    <h2 className="section-title__title title-animation">Explore Our Affordable and <br /> Flexible
-                        <span>Pricing Options</span>
+                    <h2 className="section-title__title title-custom-animation" >
+                        <TextAnimation text='Explore Our Affordable and' textColor='black' />
+                        <TextAnimation text='Flexible Pricing Options' />
                     </h2>
                 </div>
                 <div className="pricing-one__inner">

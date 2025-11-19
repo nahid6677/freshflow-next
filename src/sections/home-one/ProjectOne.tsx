@@ -6,7 +6,8 @@ import Link from "next/link";
 import Image from "next/image";
 import { FilterCategory, FilterConfig, Project } from "@/types/home-one";
 import { FILTER_CONFIGS, PROJECTS_DATA } from "./Contents";
-
+import TextAnimation from "@/components/elements/TextAnimation";
+import { motion } from "framer-motion"
 
 const CONTACT_PHONE: string = "12 (00) 456 78910";
 
@@ -81,10 +82,12 @@ const SectionTitle: FC = () => (
             </div>
             <span className="section-title__tagline">Our Projects</span>
         </div>
-        <h2 className="section-title__title title-animation">
-            A showcase of projects <span>that</span>
-            <br />
-            <span>define excellence</span>
+        <h2 className="section-title__title" style={{ display: 'flex', justifyContent: 'center', alignItems: "center" }}>
+            <TextAnimation text="A showcase of projects that" textColor="black" /> <br />
+        </h2>
+        <h2 className="section-title__title" style={{ display: 'flex', justifyContent: 'center', alignItems: "center" }}>
+
+            <TextAnimation text="define excellence" />
         </h2>
     </div>
 );
@@ -118,7 +121,16 @@ interface ProjectCardProps {
 
 const ProjectCard: FC<ProjectCardProps> = ({ project }) => (
     <div className="col-xl-4 col-lg-4 col-md-6">
-        <div className="project-one__single">
+        <motion.div
+            initial={{ y: 50, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{
+                duration: 0.5,
+                ease: "easeOut"
+            }}
+            viewport={{ once: true, amount: 0.1 }}
+            className="project-one__single"
+        >
             <div className="project-one__img-box">
                 <div className="project-one__img">
                     <Image src={project.imgURL} alt={project.title} />
@@ -140,7 +152,7 @@ const ProjectCard: FC<ProjectCardProps> = ({ project }) => (
                     <Link href="/project-details">{project.title}</Link>
                 </h3>
             </div>
-        </div>
+        </motion.div>
     </div>
 );
 
@@ -149,7 +161,16 @@ interface ContactCardProps {
 }
 
 const ContactCard: FC<ContactCardProps> = ({ onPhoneClick }) => (
-    <div className="col-xl-4 col-lg-4 col-md-6">
+    <motion.div
+        initial={{ y: 50, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        transition={{
+            duration: 0.5,
+            ease: "easeOut"
+        }}
+        viewport={{ once: true, amount: 0.1 }}
+        className="col-xl-4 col-lg-4 col-md-6"
+    >
         <div className="project-one__single-2" >
             <div className="project-one__single-2-img">
                 <Image src={proj6} alt="Contact us" />
@@ -187,7 +208,7 @@ const ContactCard: FC<ContactCardProps> = ({ onPhoneClick }) => (
                 </a>
             </div>
         </div>
-    </div>
+    </motion.div>
 );
 
 export default ProjectOne;

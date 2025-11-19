@@ -6,7 +6,8 @@ import aboutImg3 from "../../../public/assets/images/resources/about-one-img-3.j
 import clientImg1 from "../../../public/assets/images/resources/about-one-client-img-1.jpg";
 import VideoPopup from '@/components/elements/VideoPopup';
 import Image from 'next/image';
-
+import { motion } from "framer-motion"
+import TextAnimation from '@/components/elements/TextAnimation';
 const AboutOne: React.FC = () => {
     const [showVideoPopup, setShowVideoPopup] = useState<boolean>(false);
     const [currentVideoUrl, setCurrentVideoUrl] = useState<string>("");
@@ -34,10 +35,15 @@ const AboutOne: React.FC = () => {
                 <div className="container">
                     <div className="row">
                         <div className="col-xl-6">
-                            <div
-                                className="about-one__left wow slideInLeft"
-                                data-wow-delay="100ms"
-                                data-wow-duration="2500ms"
+                            <motion.div
+                                initial={{ x: -700, opacity: 0 }}
+                                whileInView={{ x: 0, opacity: 1 }}
+                                transition={{
+                                    duration: 1.8,
+                                    ease: "easeOut"
+                                }}
+                                viewport={{ once: true, amount: 0.1 }}
+                                className="about-one__left "
                             >
                                 <div className="row">
                                     <div className="col-xl-4 col-lg-4 col-md-4">
@@ -46,7 +52,7 @@ const AboutOne: React.FC = () => {
                                                 <Image
                                                     src={aboutImg1}
                                                     alt="About us image 1"
-                                                    placeholder="blur" 
+                                                    placeholder="blur"
                                                 />
                                             </div>
                                             <div className="about-one__left-img-2">
@@ -87,7 +93,7 @@ const AboutOne: React.FC = () => {
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </motion.div>
                             <h2
                                 className="about-one__left-big-title wow fadeInLeft"
                                 data-wow-delay="300ms"
@@ -111,8 +117,9 @@ const AboutOne: React.FC = () => {
                                         <span className="section-title__tagline">About Us</span>
                                     </div>
                                     <h2 className="section-title__title title-animation">
-                                        Crafting Dreams, Guided by Purpose, Rooted in Creativity,{" "}
-                                        <span>& Values That Define Our Journey</span>
+                                        <TextAnimation text='Crafting Dreams, Guided by' textColor='black'/>
+                                        <TextAnimation text='Purpose, Rooted in Creativity,' textColor='black'/>
+                                        <TextAnimation text='& Values That Define Our Journey' textColor=''/> 
                                     </h2>
                                 </div>
                                 <p className="about-one__text">

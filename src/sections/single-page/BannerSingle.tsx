@@ -11,7 +11,7 @@ import satisfiedPartner3 from '../../../public/assets/images/resources/banner-on
 import googleRatingImg from '../../../public/assets/images/resources/banner-one-google-rating-img.png';
 import Image from 'next/image';
 import Link from 'next/link';
-
+import { motion } from "framer-motion"
 const BannerSingle: React.FC = () => {
     const [typedText, setTypedText] = useState<string>('');
     const [currentStringIndex, setCurrentStringIndex] = useState<number>(0);
@@ -205,7 +205,14 @@ const BannerSingle: React.FC = () => {
                     <div className="col-xl-6">
                         <div className="banner-one__right">
                             <div className="banner-one__img-box">
-                                <div className="banner-one__img wow slideInRight">
+                                <motion.div
+                                    initial={{ x: 900 }}
+                                    animate={{ x: 0 }}
+                                    transition={{
+                                        duration: 1.8,       
+                                        ease: "easeOut"     
+                                    }}
+                                    className="banner-one__img wow slideInRight">
                                     <Image
                                         src={bannerImg1}
                                         alt="Cleaning service professional"
@@ -215,7 +222,7 @@ const BannerSingle: React.FC = () => {
                                             objectFit: 'contain'
                                         }}
                                     />
-                                </div>
+                                </motion.div>
                                 <div className="banner-one__google-rating">
                                     <div className="banner-one__google-rating-img">
                                         <Image
