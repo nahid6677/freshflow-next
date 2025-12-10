@@ -42,7 +42,7 @@ const NewsLaterSingle: React.FC<NewsletterProps> = ({ img1 = newsimg3, img2 = ne
         }
     };
     return (
-        <section className="newsletter-one">
+        <section className="newsletter-one newsletter-one__pdtop">
             <div className="container">
                 <div className="newsletter-one__inner">
                     <div className="newsletter-one__shape-bg"

@@ -50,7 +50,7 @@ const slideData: SlideData[] = [
         title: {
             line1: 'Professional',
             line2: 'Cleaning',
-            span1: 'You Can',
+            span1: ' You Can',
             span2: 'Trust!',
         },
         text1: 'Experience top-notch cleaning services tailored to your needs, ensuring',
@@ -64,7 +64,7 @@ const slideData: SlideData[] = [
         title: {
             line1: 'Professional',
             line2: 'Cleaning',
-            span1: 'You Can',
+            span1: ' You Can',
             span2: 'Trust!',
         },
         text1: 'Experience top-notch cleaning services tailored to your needs, ensuring',
@@ -78,7 +78,7 @@ const slideData: SlideData[] = [
         title: {
             line1: 'Professional',
             line2: 'Cleaning',
-            span1: 'You Can',
+            span1: ' You Can',
             span2: 'Trust!',
         },
         text1: 'Experience top-notch cleaning services tailored to your needs, ensuring',
@@ -125,7 +125,7 @@ const BannerHomeTwo: React.FC = () => {
                                         </div>
                                         <div className="text">
                                             <p>
-                                                <a href="mailto:support@example.com">support@example.com</a>
+                                                <Link href="mailto:support@example.com">support@example.com</Link>
                                             </p>
                                         </div>
                                     </li>
@@ -135,7 +135,7 @@ const BannerHomeTwo: React.FC = () => {
                                         </div>
                                         <div className="text">
                                             <p>
-                                                <a href="tel:1212345678900">+12 (123) 456 78900</a>
+                                                <Link href="tel:1212345678900">+12 (123) 456 78900</Link>
                                             </p>
                                         </div>
                                     </li>
@@ -186,14 +186,14 @@ const BannerHomeTwo: React.FC = () => {
                                             <div className="main-menu-two__call-content">
                                                 <p className="main-menu-two__call-sub-title">Call Us Any Time</p>
                                                 <h5 className="main-menu-two__call-number">
-                                                    <a href="tel:12004578960">+12 (00) 457 8960</a>
+                                                    <Link href="tel:12004578960">+12 (00) 457 8960</Link>
                                                 </h5>
                                             </div>
                                         </div>
                                     </div>
 
                                     <div className="main-menu-two__main-menu-box">
-                                        <a
+                                        <Link
                                             href="#"
                                             onClick={(e) => {
                                                 e.preventDefault();
@@ -202,7 +202,7 @@ const BannerHomeTwo: React.FC = () => {
                                             className="mobile-nav__toggler"
                                         >
                                             <i className="fa fa-bars"></i>
-                                        </a>
+                                        </Link>
 
                                         <ul className="main-menu__list">
                                             <li className="dropdown megamenu current">
@@ -362,7 +362,7 @@ const BannerHomeTwo: React.FC = () => {
                                         </div>
 
                                         <div className="main-menu-two__nav-sidebar-icon">
-                                            <a
+                                            <Link
                                                 href='#'
                                                 className="navSidebar-button"
                                                 onClick={(e) => {
@@ -371,7 +371,7 @@ const BannerHomeTwo: React.FC = () => {
                                                 }}
                                             >
                                                 <span className="icon-app"></span>
-                                            </a>
+                                            </Link>
                                         </div>
                                     </div>
                                 </div>

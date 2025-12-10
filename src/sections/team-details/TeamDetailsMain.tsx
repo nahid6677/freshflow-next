@@ -7,6 +7,7 @@ import experienceimg3 from "../../../public/assets/images/shapes/experience-one-
 import Image from "next/image"
 import ProgressBars from "@/components/elements/ProgressBars"
 import AdvanceCountUp from "@/components/elements/AdvanceCountUp"
+import Link from "next/link"
 const TeamDetailsMain = () => {
     return (
         <>
@@ -48,10 +49,10 @@ const TeamDetailsMain = () => {
                                         <p className="team-details__sub-title">Lead Cleaning Technician</p>
                                     </div>
                                     <div className="team-details__social-box">
-                                        <a href="#"><span className="icon-linkedin-big-logo"></span></a>
-                                        <a href="#"><span className="icon-pinterest"></span></a>
-                                        <a href="#"><span className="icon-facebook-app-symbol"></span></a>
-                                        <a href="#"><span className="icon-instagram"></span></a>
+                                        <Link href="#"><span className="icon-linkedin-big-logo"></span></Link>
+                                        <Link href="#"><span className="icon-pinterest"></span></Link>
+                                        <Link href="#"><span className="icon-facebook-app-symbol"></span></Link>
+                                        <Link href="#"><span className="icon-instagram"></span></Link>
                                     </div>
                                 </div>
                                 <h3 className="team-details__title-1">About Me</h3>
@@ -65,11 +66,11 @@ const TeamDetailsMain = () => {
                                     </li>
                                     <li>
                                         <span>Phone:</span>
-                                        <p><a href="tel:12345678910">+12 345 6789 10</a></p>
+                                        <p><Link href="tel:12345678910">+12 345 6789 10</Link></p>
                                     </li>
                                     <li>
                                         <span>Email:</span>
-                                        <p><a href="mailto:alison@domain.com">alison@domain.com</a></p>
+                                        <p><Link href="mailto:alison@domain.com">alison@domain.com</Link></p>
                                     </li>
                                     <li>
                                         <span>Education:</span>

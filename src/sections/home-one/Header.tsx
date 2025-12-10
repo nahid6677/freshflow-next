@@ -21,7 +21,7 @@ const Header: React.FC = () => {
     const { setIsMobileOpen, setIsSearch } = context;
 
     const handleSearch = (): void => {
-        setIsSearch((prev) => !prev); 
+        setIsSearch((prev) => !prev);
     };
     const isActive = (path: string) => pathname === path;
 
@@ -37,7 +37,7 @@ const Header: React.FC = () => {
                                 </div>
                                 <div className="text">
                                     <p>
-                                        <a href="mailto:support@example.com">support@example.com</a>
+                                        <Link href="mailto:support@example.com">support@example.com</Link>
                                     </p>
                                 </div>
                             </li>
@@ -47,7 +47,7 @@ const Header: React.FC = () => {
                                 </div>
                                 <div className="text">
                                     <p>
-                                        <a href="tel:+121234567890">+12 (123) 456 78900</a>
+                                        <Link href="tel:+121234567890">+12 (123) 456 78900</Link>
                                     </p>
                                 </div>
                             </li>
@@ -63,18 +63,18 @@ const Header: React.FC = () => {
                         <div className="main-menu__top-social-box">
                             <h4 className="main-menu__top-social-title">Follow Us</h4>
                             <div className="main-menu__top-social">
-                                <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+                                <Link href="https://facebook.com" target="_blank" rel="noopener noreferrer">
                                     <span className="icon-facebook-app-symbol"></span>
-                                </a>
-                                <a href="https://pinterest.com" target="_blank" rel="noopener noreferrer">
+                                </Link>
+                                <Link href="https://pinterest.com" target="_blank" rel="noopener noreferrer">
                                     <span className="icon-pinterest"></span>
-                                </a>
-                                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+                                </Link>
+                                <Link href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
                                     <span className="icon-linkedin-big-logo"></span>
-                                </a>
-                                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+                                </Link>
+                                <Link href="https://instagram.com" target="_blank" rel="noopener noreferrer">
                                     <span className="icon-instagram"></span>
-                                </a>
+                                </Link>
                             </div>
                         </div>
                     </div>

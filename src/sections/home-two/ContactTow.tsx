@@ -4,6 +4,7 @@ import contactimg1 from "../../../public/assets/images/shapes/contact-two-shape-
 import contactimg2 from "../../../public/assets/images/shapes/contact-two-shape-2.png"
 import Image from 'next/image';
 import TextAnimation from '@/components/elements/TextAnimation';
+import Link from 'next/link';
 
 const ContactTow: React.FC = () => {
     const [serviceType, setServiceType] = useState<string>("1")
@@ -32,10 +33,10 @@ const ContactTow: React.FC = () => {
                                     <span className="section-title__tagline">Get in Touch</span>
                                 </div>
                                 <h2 className="section-title__title title-animation">
-                                    <TextAnimation text='lets you connect with experts, get' textColor='white'/>
-                                    <TextAnimation text='advice, advice, and explore solutions' textColor='white'/>
-                                    
-                                    
+                                    <TextAnimation text='lets you connect with experts, get' textColor='white' />
+                                    <TextAnimation text='advice, advice, and explore solutions' textColor='white' />
+
+
                                 </h2>
                             </div>
                             <div className="contact-two__inner">
@@ -102,7 +103,7 @@ const ContactTow: React.FC = () => {
                         </div>
                         <div className="contact-two__call-contact">
                             <p>Send Email</p>
-                            <h4><a href="mailto:support@mail.com">support@mail.com</a></h4>
+                            <h4><Link href="mailto:support@mail.com">support@mail.com</Link></h4>
                         </div>
                     </li>
                     <li>
@@ -111,7 +112,7 @@ const ContactTow: React.FC = () => {
                         </div>
                         <div className="contact-two__call-contact">
                             <p>Call Us Any TIme</p>
-                            <h4><a href="tel:+12004578960">+12 (00) 457 8960</a></h4>
+                            <h4><Link href="tel:+12004578960">+12 (00) 457 8960</Link></h4>
                         </div>
                     </li>
                 </ul>

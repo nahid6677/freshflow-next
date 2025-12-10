@@ -302,7 +302,7 @@ export const blogs: Blog[] = [
             link2: "Moping",
         },
         title: "How Our Cleaning Agency Makes a Difference",
-        text: "A behind-the-scenes look at how a professional cleaning team transforms messy spaces"
+        text: "A behind-the-scenes look at how a professional transforms messy spaces"
     },
     {
         id: 4,

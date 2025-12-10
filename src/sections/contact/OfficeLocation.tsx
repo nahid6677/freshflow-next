@@ -4,6 +4,7 @@ import location2 from "../../../public/assets/images/shapes/office-location-two-
 import location3 from "../../../public/assets/images/shapes/office-location-two-shape-3.png";
 import Image from 'next/image';
 import TextAnimation from '@/components/elements/TextAnimation';
+import Link from 'next/link';
 
 // Define interfaces
 interface OfficeLocation {
@@ -68,8 +69,8 @@ const OfficeLocation: React.FC = () => {
                         <span className="section-title__tagline">Office Location</span>
                     </div>
                     <h2 className="section-title__title title-custom-animation">
-                        <TextAnimation text='Find Your Suitable Area to Connect' textColor='black'/> 
-                        <TextAnimation text='With Us Easily' />  
+                        <TextAnimation text='Find Your Suitable Area to Connect' textColor='black' />
+                        <TextAnimation text='With Us Easily' />
                     </h2>
                 </div>
                 <div className="office-location-two__inner">
@@ -92,22 +93,22 @@ const OfficeLocation: React.FC = () => {
                                         </div>
                                         <div className="office-location-two__contact-content">
                                             <h3>Contact Info</h3>
-                                            <a href={`tel:${location.tel.replace(/\s/g, '')}`}>
+                                            <Link href={`tel:${location.tel.replace(/\s/g, '')}`}>
                                                 {location.tel}
-                                            </a>
-                                            <a href="#">
+                                            </Link>
+                                            <Link href="#">
                                                 <span className="icon-arrow-right"></span>
-                                            </a>
-                                            <a href={`mailto:${location.email}`}>
+                                            </Link>
+                                            <Link href={`mailto:${location.email}`}>
                                                 {location.email}
-                                            </a>
+                                            </Link>
                                         </div>
                                     </div>
                                     <div className="office-location-two__view">
-                                        <a href="#">
+                                        <Link href="#">
                                             View Map
                                             <span className="icon-arrow-right"></span>
-                                        </a>
+                                        </Link>
                                     </div>
                                 </div>
                             </li>

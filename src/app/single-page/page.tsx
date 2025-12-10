@@ -40,7 +40,7 @@ const SingleHomePage: React.FC = () => {
                 });
             },
             {
-                threshold: 0.2,
+                threshold: 0.1,
             }
         );
 
@@ -65,13 +65,13 @@ const SingleHomePage: React.FC = () => {
             <WhyChooseSingle />
             <ProjectSingle />
             <TeamSingle />
-            <ContactSingle />
             <TestimonialSingle />
             <BrandSingle />
             <OfficeLocationSingle />
             <PricingSingle />
-            <BlogSingle />
             <NewsLaterSingle />
+            <BlogSingle />
+            <ContactSingle />
             <FooterSingle />
             <StrickyNavSingle />
             <SearchProp />

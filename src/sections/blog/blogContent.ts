@@ -9,7 +9,13 @@ import blogImg6 from "../../../public/assets/images/blog/blog-1-6.jpg"
 import blogImg7 from "../../../public/assets/images/blog/blog-1-7.jpg"
 import blogImg8 from "../../../public/assets/images/blog/blog-1-8.jpg"
 
-
+import listimg1 from "../../../public/assets/images/blog/blog-list-1-1.jpg";
+import listimg7 from "../../../public/assets/images/blog/blog-list-client-img-1.jpg";
+import listimg2 from "../../../public/assets/images/blog/blog-list-1-2.jpg";
+import listimg6 from "../../../public/assets/images/blog/blog-list-client-img-2.jpg";
+import listimg4 from "../../../public/assets/images/blog/blog-list-1-3.jpg";
+import listimg5 from "../../../public/assets/images/blog/blog-list-client-img-4.jpg";
+import { BlogPost } from "@/types/blog-list"
 
 export const Allblogs: Blog[] = [
     {
@@ -52,7 +58,7 @@ export const Allblogs: Blog[] = [
             link2: "Moping",
         },
         title: "How Our Cleaning Agency Makes a Difference",
-        text: "A behind-the-scenes look at how a professional cleaning team transforms messy spaces"
+        text: "A behind-the-scenes look at how a professional transforms messy spaces"
     },
     {
         id: 4,
@@ -108,7 +114,7 @@ export const Allblogs: Blog[] = [
             link2: "Moping",
         },
         title: "How Our Cleaning Agency Makes a Difference",
-        text: "A behind-the-scenes look at how a professional cleaning team transforms messy spaces"
+        text: "A behind-the-scenes look at how cleaning team transforms messy spaces"
     },
     {
         id: 8,
@@ -164,7 +170,7 @@ export const Allblogs: Blog[] = [
             link2: "Moping",
         },
         title: "How Our Cleaning Agency Makes a Difference",
-        text: "A behind-the-scenes look at how a professional cleaning team transforms messy spaces"
+        text: "A behind-the-scenes look at how a professional transforms messy spaces"
     },
     {
         id: 12,
@@ -211,5 +217,93 @@ export const Allblogs: Blog[] = [
 ]
 
 
+//Blog List Page Content
+
+export const blogPosts: BlogPost[] = [
+    {
+        id: 1,
+        title: "5 Essential Tips for Choosing the Right Cleaning Service for Your Home",
+        description: "This blog will guide readers through the process of selecting the best cleaning service for their home, focusing on factors like reliability, cost, and the types of cleaning offered.",
+        date: "March 23, 2024",
+        comments: "12 Comments",
+        tags: ["#Sanitize", "#DeepClean"],
+        author: "Alisa Olivia",
+        image1: listimg1,
+        image2: listimg7,
+        hasImage: true
+    },
+    {
+        id: 2,
+        title: "The Benefits of Hiring a Professional Cleaning Service: Is It Worth It?",
+        description: "This blog will guide readers through the process of selecting the best cleaning service for their home, focusing on factors like reliability, cost, and the types of cleaning offered.",
+        date: "March 23, 2024",
+        comments: "12 Comments",
+        tags: ["#Sanitize", "#DeepClean"],
+        author: "Adam Smith",
+        image1: listimg2,
+        image2: listimg6,
+        hasImage: true
+    },
+    {
+        id: 3,
+        title: "Top 10 Common Cleaning Mistakes to Avoid for a Spotless Home",
+        description: "This blog will guide readers through the process of selecting the best cleaning service for their home, focusing on factors like reliability, cost, and the types of cleaning offered.",
+        date: "March 23, 2024",
+        comments: "12 Comments",
+        tags: ["#Sanitize", "#DeepClean"],
+        author: "Smith Jhon",
+        image1: listimg4,
+        image2: listimg5,
+        hasImage: true
+    },
+    {
+        id: 4,
+        title: "5 Essential Tips for Choosing the Right Cleaning Service for Your Home",
+        description: "This blog will guide readers through the process of selecting the best cleaning service for their home, focusing on factors like reliability, cost, and the types of cleaning offered.",
+        date: "March 23, 2024",
+        comments: "12 Comments",
+        tags: ["#Sanitize", "#DeepClean"],
+        author: "Alisa Olivia",
+        image1: listimg1,
+        image2: listimg7,
+        hasImage: true
+    },
+    {
+        id: 5,
+        title: "The Benefits of Hiring a Professional Cleaning Service: Is It Worth It?",
+        description: "This blog will guide readers through the process of selecting the best cleaning service for their home, focusing on factors like reliability, cost, and the types of cleaning offered.",
+        date: "March 23, 2024",
+        comments: "12 Comments",
+        tags: ["#Sanitize", "#DeepClean"],
+        author: "Adam Smith",
+        image1: listimg2,
+        image2: listimg6,
+        hasImage: true
+    },
+    {
+        id: 6,
+        title: "5 Essential Tips for Choosing the Right Cleaning Service for Your Home",
+        description: "This blog will guide readers through the process of selecting the best cleaning service for their home, focusing on factors like reliability, cost, and the types of cleaning offered.",
+        date: "March 23, 2024",
+        comments: "12 Comments",
+        tags: ["#Sanitize", "#DeepClean"],
+        author: "Alisa Olivia",
+        image1: listimg1,
+        image2: listimg7,
+        hasImage: true
+    },
+    {
+        id: 7,
+        title: "The Benefits of Hiring a Professional Cleaning Service: Is It Worth It?",
+        description: "This blog will guide readers through the process of selecting the best cleaning service for their home, focusing on factors like reliability, cost, and the types of cleaning offered.",
+        date: "March 23, 2024",
+        comments: "12 Comments",
+        tags: ["#Sanitize", "#DeepClean"],
+        author: "Adam Smith",
+        image1: listimg2,
+        image2: listimg6,
+        hasImage: true
+    },
+];
 
 

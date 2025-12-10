@@ -127,18 +127,6 @@ const ProductDetailsMain: React.FC = () => {
                                         <Link href="#"><span className="fab fa-facebook"></span></Link>
                                         <Link href="#"><span className="fab fa-pinterest-p"></span></Link>
                                         <Link href="#"><span className="fab fa-instagram"></span></Link>
-                                        {/* <a href="#" onClick={(e) => e.preventDefault()}>
-                                            <span className="fab fa-twitter"></span>
-                                        </a>
-                                        <a href="#" onClick={(e) => e.preventDefault()}>
-                                            <span className="fab fa-facebook"></span>
-                                        </a>
-                                        <a href="#" onClick={(e) => e.preventDefault()}>
-                                            <span className="fab fa-pinterest-p"></span>
-                                        </a>
-                                        <a href="#" onClick={(e) => e.preventDefault()}>
-                                            <span className="fab fa-instagram"></span>
-                                        </a> */}
                                     </div>
                                 </div>
                             </div>

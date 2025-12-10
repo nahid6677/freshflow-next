@@ -5,6 +5,7 @@ import shapimg3 from "../../../public/assets/images/shapes/contact-four-contact-
 import Image from 'next/image';
 import ContactForm from './ContactForm';
 import TextAnimation from '@/components/elements/TextAnimation';
+import Link from 'next/link';
 // Contact information data
 interface ContactInfo {
     icon: string;
@@ -53,7 +54,7 @@ const ContactUs: React.FC = () => {
                                 </div>
                                 <h2 className="section-title__title title-animation">
                                     <TextAnimation text='Reach Out to Us for' textColor='black' /> <br></br>
-                                    <TextAnimation text='Assistance or Inquiries' /> 
+                                    <TextAnimation text='Assistance or Inquiries' />
                                 </h2>
                             </div>
                             <p className="contact-four__left-text">{`We're`} Here to Help—Contact Us Today!</p>
@@ -70,19 +71,19 @@ const ContactUs: React.FC = () => {
                                                     <>
                                                         <p>
                                                             <span>{item.content[0]}</span>{' '}
-                                                            <a
+                                                            <Link
                                                                 href={item.links[0].type === 'tel'
                                                                     ? `tel:${item.links[0].value.replace(/\s/g, '')}`
                                                                     : `mailto:${item.links[0].value}`}
                                                             >
                                                                 {item.links[0].value}
-                                                            </a>
+                                                            </Link>
                                                         </p>
                                                         <p>
                                                             <span>{item.content[1]}</span>{' '}
-                                                            <a href={`mailto:${item.links[1].value}`}>
+                                                            <Link href={`mailto:${item.links[1].value}`}>
                                                                 {item.links[1].value}
-                                                            </a>
+                                                            </Link>
                                                         </p>
                                                     </>
                                                 ) : (

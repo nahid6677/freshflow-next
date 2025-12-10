@@ -6,6 +6,7 @@ import thumbImg2 from '../../../public/assets/images/shop/product-thumb-2.jpg';
 import thumbImg3 from '../../../public/assets/images/shop/product-thumb-3.jpg';
 import thumbImg4 from '../../../public/assets/images/shop/product-thumb-4.jpg';
 import Image from 'next/image';
+import Link from 'next/link';
 
 interface Product {
     id: number;
@@ -160,7 +161,7 @@ const RightSidebar: React.FC<SideBarProps> = ({ setProducts, defaultProducts1 })
                     <ul className="list-unstyled">
                         {categories.map((category, index) => (
                             <li key={index} className={category.active ? 'active' : ''}>
-                                <a href="#">{category.name}</a>
+                                <Link href="#">{category.name}</Link>
                             </li>
                         ))}
                     </ul>
@@ -173,13 +174,13 @@ const RightSidebar: React.FC<SideBarProps> = ({ setProducts, defaultProducts1 })
                             <li key={product.id}>
                                 <div className="img">
                                     <Image src={product.image} alt="Product" width={70} height={70} />
-                                    <a href="#">
+                                    <Link href="#">
                                         <i className="fa fa-link" aria-hidden="true"></i>
-                                    </a>
+                                    </Link>
                                 </div>
                                 <div className="content">
                                     <div className="title">
-                                        <h5><a href="#">{product.title}</a></h5>
+                                        <h5><Link href="#">{product.title}</Link></h5>
                                     </div>
                                     <div className="price">
                                         <p>{product.price}</p>
@@ -197,7 +198,7 @@ const RightSidebar: React.FC<SideBarProps> = ({ setProducts, defaultProducts1 })
                     <h3 className="product__sidebar-title">Product Tags</h3>
                     <div className="shop-product__tags-list">
                         {productTags.map((tag, index) => (
-                            <a key={index} href="#">{tag}</a>
+                            <Link key={index} href="#">{tag}</Link>
                         ))}
                     </div>
                 </div>

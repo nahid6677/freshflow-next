@@ -10,6 +10,7 @@ import contImg2 from "../../../public/assets/images/shapes/contact-one-shape-3.p
 import contImg3 from "../../../public/assets/images/resources/contact-one-img-main.jpg";
 import contImg4 from "../../../public/assets/images/resources/contact-one-small-img-1.jpg";
 import contImg5 from "../../../public/assets/images/resources/contact-one-small-img-2.jpg";
+import { Link } from "lucide-react";
 
 // Types
 interface ContactFormData {
@@ -122,7 +123,7 @@ const ContactSingle: React.FC = () => {
     );
 
     return (
-        <section className="contact-one">
+        <section className="contact-one" id="contact">
             <div className="contact-one__shape-1"></div>
             <div className="contact-one__shape-2 zoom-fade">
                 <Image
@@ -361,7 +362,7 @@ const ContactInfoSection: FC<ContactInfoSectionProps> = ({ contactInfo }) => (
                     <div className="contact-one__call-contact">
                         <p>{info.label}</p>
                         <h4>
-                            <a href={info.link}>{info.title}</a>
+                            <Link href={info.link}>{info.title}</Link>
                         </h4>
                     </div>
                 </li>

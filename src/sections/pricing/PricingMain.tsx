@@ -5,7 +5,7 @@ import pricimg2 from "../../../public/assets/images/shapes/pricing-two-shape-3.p
 import pricimg3 from "../../../public/assets/images/shapes/pricing-two-discount--shape-1.png";
 import Image from 'next/image';
 import PricingCard from '@/components/elements/PricingCard';
-import { pricingContent, pricingContentTow } from '../home-tow/contents';
+import { pricingContent, pricingContentTow } from '../home-two/contents';
 import { PricingItem } from '@/types/home-tow';
 import TextAnimation from '@/components/elements/TextAnimation';
 const PricingMain: React.FC = () => {

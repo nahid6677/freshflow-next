@@ -1,5 +1,5 @@
 "use client"
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import newsimg1 from "../../../public/assets/images/shapes/newsletter-one-shape-1.png"
 import newsimg2 from "../../../public/assets/images/shapes/newsletter-one-shape-2.png"
 import newsimg3 from "../../../public/assets/images/resources/newsletter-one-img-1-1.jpg"
@@ -15,6 +15,11 @@ interface NewsletterProps {
 }
 
 const NewsLetterOne: React.FC<NewsletterProps> = ({ img1 = newsimg3, img2 = newsimg4, img3 = newsimg5 }) => {
+    const [isMounted, setIsMounted] = useState(false);
+
+    useEffect(() => {
+        setIsMounted(true);
+    }, []);
 
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>): Promise<void> => {
         e.preventDefault();
@@ -32,6 +37,7 @@ const NewsLetterOne: React.FC<NewsletterProps> = ({ img1 = newsimg3, img2 = news
                     showConfirmButton: false,
                     timer: 1000
                 });
+                form.reset();
             }, 1000);
         } else {
             Swal.fire({
@@ -41,12 +47,12 @@ const NewsLetterOne: React.FC<NewsletterProps> = ({ img1 = newsimg3, img2 = news
             });
         }
     };
+
     return (
         <section className="newsletter-one">
             <div className="container">
                 <div className="newsletter-one__inner">
-                    <div className="newsletter-one__shape-bg"
-                    ></div>
+                    <div className="newsletter-one__shape-bg"></div>
                     <div className="newsletter-one__shape-1 float-bob-x">
                         <Image src={newsimg1} alt="newsletter" />
                     </div>
@@ -83,17 +89,34 @@ const NewsLetterOne: React.FC<NewsletterProps> = ({ img1 = newsimg3, img2 = news
                         </div>
                         <div className="col-xl-4">
                             <div className="newsletter-one__form-box">
-                                <form onSubmit={handleSubmit} className="newsletter-one__form">
-                                    <div className="newsletter-one__input">
-                                        <input name="email" type="email" placeholder="Email Address" />
-                                    </div>
-                                    <button type="submit" className="newsletter-one__btn">
-                                        Subscribe Now <span className="icon-send"></span></button>
-                                </form>
+                                {isMounted ? (
+                                    <form
+                                        onSubmit={handleSubmit}
+                                        className="newsletter-one__form"
+                                        suppressHydrationWarning
+                                    >
+                                        <div className="newsletter-one__input" suppressHydrationWarning>
+                                            <input
+                                                name="email"
+                                                type="email"
+                                                placeholder="Email Address"
+                                                autoComplete="email"
+                                                data-lpignore="true"
+                                                data-form-type="other"
+                                                required
+                                            />
+                                        </div>
+                                        <button type="submit" className="newsletter-one__btn">
+                                            Subscribe Now <span className="icon-send"></span>
+                                        </button>
+                                    </form>
+                                ) : (
+                                    <div style={{ minHeight: '80px' }} />
+                                )}
                                 <p className="newsletter-one__form-text">
-                                    By Subscribing you agree to the
+                                    By Subscribing you agree to the{' '}
                                     <Link href={"/about"}>Terms of use</Link>
-                                    &
+                                    {' '}&{' '}
                                     <Link href={"/about"}>Privacy Policy</Link>
                                 </p>
                             </div>

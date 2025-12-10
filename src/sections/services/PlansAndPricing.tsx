@@ -4,7 +4,7 @@ import pricimg1 from "../../../public/assets/images/shapes/pricing-two-shape-2.p
 import pricimg2 from "../../../public/assets/images/shapes/pricing-two-shape-3.png";
 import pricimg3 from "../../../public/assets/images/shapes/pricing-two-discount--shape-1.png";
 import Image from 'next/image';
-import { pricingContent, pricingContentTow } from '../home-tow/contents';
+import { pricingContent, pricingContentTow } from '../home-two/contents';
 import PricingCard from '@/components/elements/PricingCard';
 import TextAnimation from '@/components/elements/TextAnimation';
 const PlansAndPricing: React.FC = () => {
@@ -28,8 +28,8 @@ const PlansAndPricing: React.FC = () => {
                         <span className="section-title__tagline">Plans & Pricing</span>
                     </div>
                     <h2 className="section-title__title title-custom-animation">
-                        <TextAnimation text='Explore Our Affordable and Flexible Pricing' textColor='black'/>
-                        <TextAnimation text='Options Tailored for You'/> 
+                        <TextAnimation text='Explore Our Affordable and Flexible Pricing' textColor='black' />
+                        <TextAnimation text='Options Tailored for You' />
                     </h2>
                 </div>
                 <div className="pricing-two__inner">

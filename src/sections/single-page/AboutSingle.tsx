@@ -28,7 +28,7 @@ const AboutSingle: React.FC = () => {
 
     return (
         <>
-            <section className="about-one">
+            <section className="about-one" id='about'>
                 <div className="about-one__bg-color"></div>
                 <div className="about-one__shape-1"></div>
                 <div className="about-one__shape-2"></div>

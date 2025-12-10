@@ -56,7 +56,7 @@ const ServiceDetailsRight: React.FC = () => {
                     </div>
                     <div className="project-details__call-content">
                         <p>Call Us To Take this services</p>
-                        <a href="tel:12004567894">+12 (00) 456 7894</a>
+                        <Link href="tel:12004567894">+12 (00) 456 7894</Link>
                     </div>
                 </div>
             </div>

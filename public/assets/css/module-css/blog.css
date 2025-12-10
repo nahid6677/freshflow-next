@@ -23,6 +23,7 @@
     mix-blend-mode: plus-lighter;
     opacity: .03;
     z-index: 1;
+    display: none;
 }
 
 .blog-one:before {
@@ -66,7 +67,8 @@
 
 .blog-one__single {
     position: relative;
-    display: block; 
+    display: block;
+    margin-bottom: 30px;
 }
 
 .blog-one__img-box {
@@ -186,7 +188,7 @@
 }
 
 .blog-one__title {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 700;
     line-height: 25px;
     font-family: var(--Freshflow-font);

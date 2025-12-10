@@ -1,10 +1,11 @@
 import { PricingItem } from '@/types/home-tow';
 import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react';
 
 
 interface PricingCartProps {
-    item: PricingItem, 
+    item: PricingItem,
 }
 
 const PricingCard: React.FC<PricingCartProps> = ({ item }) => {
@@ -34,12 +35,12 @@ const PricingCard: React.FC<PricingCartProps> = ({ item }) => {
                     {item.pricingText2}
                 </p>
                 <div className="pricing-two__btn-box">
-                    <a href="#" className="thm-btn">
+                    <Link href="#" className="thm-btn">
                         Choose Plan
                         <span>
                             <i className="icon-plus"></i>
                         </span>
-                    </a>
+                    </Link>
                 </div>
                 <div className="pricing-two__points-box">
                     <ul className="list-unstyled pricing-two__points">

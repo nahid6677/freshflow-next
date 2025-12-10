@@ -89,18 +89,18 @@ const TeamSlider: React.FC = () => {
                                             <span className="icon-share"></span>
                                         </div>
                                         <div className="team-one__social">
-                                            <a href="#" aria-label="Facebook">
+                                            <Link href="#" aria-label="Facebook">
                                                 <span className="icon-facebook-app-symbol"></span>
-                                            </a>
-                                            <a href="#" aria-label="Pinterest">
+                                            </Link>
+                                            <Link href="#" aria-label="Pinterest">
                                                 <span className="icon-pinterest"></span>
-                                            </a>
-                                            <a href="#" aria-label="LinkedIn">
+                                            </Link>
+                                            <Link href="#" aria-label="LinkedIn">
                                                 <span className="icon-linkedin-big-logo"></span>
-                                            </a>
-                                            <a href="#" aria-label="Instagram">
+                                            </Link>
+                                            <Link href="#" aria-label="Instagram">
                                                 <span className="icon-instagram"></span>
-                                            </a>
+                                            </Link>
                                         </div>
                                     </div>
                                 </div>

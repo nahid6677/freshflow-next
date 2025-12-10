@@ -62,18 +62,18 @@ const BannerThree: React.FC = () => {
                             <div className="main-menu-three__top-social-box">
                                 <h4 className="main-menu-three__top-social-title">Follow Us</h4>
                                 <div className="main-menu-three__top-social">
-                                    <a href="#">
+                                    <Link href="#">
                                         <span className="icon-facebook-app-symbol"></span>
-                                    </a>
-                                    <a href="#">
+                                    </Link>
+                                    <Link href="#">
                                         <span className="icon-pinterest"></span>
-                                    </a>
-                                    <a href="#">
+                                    </Link>
+                                    <Link href="#">
                                         <span className="icon-linkedin-big-logo"></span>
-                                    </a>
-                                    <a href="#">
+                                    </Link>
+                                    <Link href="#">
                                         <span className="icon-instagram"></span>
-                                    </a>
+                                    </Link>
                                 </div>
                             </div>
                         </div>
@@ -91,7 +91,7 @@ const BannerThree: React.FC = () => {
                                     </div>
                                 </div>
                                 <div className="main-menu-three__main-menu-box">
-                                    <a
+                                    <Link
                                         href="#"
                                         onClick={(e) => {
                                             e.preventDefault();
@@ -100,7 +100,7 @@ const BannerThree: React.FC = () => {
                                         className="mobile-nav__toggler"
                                     >
                                         <i className="fa fa-bars"></i>
-                                    </a>
+                                    </Link>
                                     <ul className="main-menu__list">
                                         <li className="dropdown megamenu current">
                                             <Link href="/">Home</Link>
@@ -172,8 +172,8 @@ const BannerThree: React.FC = () => {
                                                                             <div className="home-showcase__image">
                                                                                 <Image src={image2} alt="Single Page" />
                                                                                 <div className="home-showcase__buttons">
-                                                                                    <Link 
-                                                                                        href="/single-page" 
+                                                                                    <Link
+                                                                                        href="/single-page"
                                                                                         className="thm-btn home-showcase__buttons__item"
                                                                                     >
                                                                                         View <span className="icon-diagonal-arrow"></span>
@@ -196,7 +196,7 @@ const BannerThree: React.FC = () => {
                                             <Link href="/about">About</Link>
                                         </li>
                                         <li className="dropdown">
-                                            <a href="#">Pages</a>
+                                            <Link href="#">Pages</Link>
                                             <ul className="shadow-box">
                                                 <li><Link href="/team">Team</Link></li>
                                                 <li><Link href="/team-details">Team Details</Link></li>
@@ -267,16 +267,16 @@ const BannerThree: React.FC = () => {
                                         </Link>
                                     </div>
                                     <div className="main-menu-three__nav-sidebar-icon">
-                                        <a 
+                                        <Link
                                             onClick={(e) => {
                                                 e.preventDefault();
                                                 setSideBar(prev => !prev);
-                                            }} 
-                                            className="navSidebar-button" 
+                                            }}
+                                            className="navSidebar-button"
                                             href="#"
                                         >
                                             <span className="icon-app"></span>
-                                        </a>
+                                        </Link>
                                     </div>
                                 </div>
                             </div>
@@ -300,7 +300,7 @@ const BannerThree: React.FC = () => {
                                 Professional Cleaning <br /> <span>You Can Trust!</span>
                             </h2>
                             <p>
-                                Lorem ipsum dolor sit amet consectetur adipiscing elit proin sit amet neque ac ipsum <br /> 
+                                Lorem ipsum dolor sit amet consectetur adipiscing elit proin sit amet neque ac ipsum <br />
                                 imperdiet mollis pellentesque mi mauris at auctor enim imperdiet eget sed ipsum.
                             </p>
                             <div className="banner-two__btn-box">

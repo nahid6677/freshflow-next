@@ -9,6 +9,7 @@ import pricing3 from "../../../public/assets/images/shapes/pricing-one-tab-conte
 import pricing4 from "../../../public/assets/images/shapes/pricing-one-tab-content-shape-2.png"
 import bgImg from '../../../public/assets/images/shapes/pricing-one-shape-bg-2.png'
 import TextAnimation from '@/components/elements/TextAnimation';
+import Link from 'next/link';
 
 type Package = 'weekly' | 'monthly' | 'yearly'
 
@@ -122,9 +123,9 @@ const PricingOne: React.FC = () => {
                                             ))}
                                         </ul>
                                         <div className="pricing-one__btn-box">
-                                            <a href="/pricing">
+                                            <Link href="/pricing">
                                                 <span className="icon-plus-1"></span> Choose Plan
-                                            </a>
+                                            </Link>
                                         </div>
                                     </div>
                                 </div>

@@ -2,8 +2,9 @@
 import React from 'react'
 import pricingShape from '../../../public/assets/images/shapes/pricing-two-shape-1.png';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import {  Autoplay, Pagination } from 'swiper/modules';
+import { Autoplay, Pagination } from 'swiper/modules';
 import Image from 'next/image';
+import Link from 'next/link';
 interface Pricing {
     id: number,
     packageName: string,
@@ -134,14 +135,14 @@ const PricingCarouselMain: React.FC = () => {
         <section className="pricing-carousel-page">
             <div className="container">
                 <div className="pricing-carousel-style owl-carousel owl-theme carousel-dot-style">
-                    <Swiper 
+                    <Swiper
                         className='pricing-carousel'
-                        modules={[Pagination,Autoplay]}
+                        modules={[Pagination, Autoplay]}
                         spaceBetween={20}
                         slidesPerView={3}
                         pagination={{
                             clickable: true,
-                        }} 
+                        }}
                         loop={true}
                         autoplay={{
                             delay: 4000,
@@ -180,9 +181,9 @@ const PricingCarouselMain: React.FC = () => {
                                         </h3>
                                         <p className="pricing-two__text">{pricing.description}</p>
                                         <div className="pricing-two__btn-box">
-                                            <a href="#" className="thm-btn">
+                                            <Link href="#" className="thm-btn">
                                                 Choose Plan<span><i className="icon-plus"></i></span>
-                                            </a>
+                                            </Link>
                                         </div>
                                         <div className="pricing-two__points-box">
                                             <ul className="list-unstyled pricing-two__points">

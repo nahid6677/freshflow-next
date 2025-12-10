@@ -1,11 +1,11 @@
 "use client"
 import React, { useState } from 'react';
-import { accordionItems1, accordionItems2 } from '../home-tow/contents';
+import { accordionItems1, accordionItems2 } from '../home-two/contents';
 import AccorditionItemFaq from '@/components/elements/AccorditionItemFaq';
 
 
 
-const FaqMain:React.FC = () => {
+const FaqMain: React.FC = () => {
     const [activeAcc, setActiveAcc] = useState<number | null>(2);
 
     const handleToggle = (index: number): void => {

@@ -15,7 +15,9 @@ const ContextProvider: React.FC<{ children: React.ReactNode }> = ({ children }) 
   const toggleMobileMenu = () => {
     setIsMobileOpen((prev) => !prev);
   };
+
   const scrollToSection: ScrollToSection = (id: string) => {
+
     const element = document.getElementById(id);
     if (!element) return;
     const offset = 70; // adgust height

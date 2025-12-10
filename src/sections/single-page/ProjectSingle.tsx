@@ -28,7 +28,7 @@ const ProjectSingle: React.FC = () => {
     }, []);
 
     return (
-        <section className="project-one">
+        <section className="project-one" id="project">
             <div className="project-one__bg-shape"></div>
             <div className="project-one__bg-shape-2"></div>
             <div className="project-one__shape-1"></div>

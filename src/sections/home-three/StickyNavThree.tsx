@@ -68,14 +68,14 @@ const StickyNavThree: React.FC = () => {
                                 <div className="main-menu-two__call-content">
                                     <p className="main-menu-two__call-sub-title">Call Us Any Time</p>
                                     <h5 className="main-menu-two__call-number">
-                                        <a href="tel:12004578960">+12 (00) 457 8960</a>
+                                        <Link href="tel:12004578960">+12 (00) 457 8960</Link>
                                     </h5>
                                 </div>
                             </div>
                         </div>
 
                         <div className="main-menu-two__main-menu-box">
-                            <a
+                            <Link
                                 href="#"
                                 onClick={(e) => {
                                     e.preventDefault();
@@ -84,7 +84,7 @@ const StickyNavThree: React.FC = () => {
                                 className="mobile-nav__toggler"
                             >
                                 <i className="fa fa-bars"></i>
-                            </a>
+                            </Link>
 
                             <ul className="main-menu__list">
                                 <li className="dropdown megamenu current">
@@ -253,7 +253,7 @@ const StickyNavThree: React.FC = () => {
                             </div>
 
                             <div className="main-menu-two__nav-sidebar-icon">
-                                <a
+                                <Link
                                     className="navSidebar-button"
                                     onClick={(e) => {
                                         e.preventDefault();
@@ -262,7 +262,7 @@ const StickyNavThree: React.FC = () => {
                                     href="#"
                                 >
                                     <span className="icon-app"></span>
-                                </a>
+                                </Link>
                             </div>
                         </div>
                     </div>

@@ -57,9 +57,9 @@ const StickyNavInner = () => {
                                 </div>
                             </div>
                             <div className="main-menu-three__main-menu-box">
-                                <a href="#" className="mobile-nav__toggler">
+                                <Link href="#" className="mobile-nav__toggler">
                                     <i className="fa fa-bars"></i>
-                                </a>
+                                </Link>
                                 <ul className="main-menu__list">
                                     <li className="dropdown megamenu">
                                         <Link href="/">Home</Link>
@@ -145,7 +145,7 @@ const StickyNavInner = () => {
                                         <Link href="/about">About</Link>
                                     </li>
                                     <li className={`dropdown ${isCurrent(["/team", "/team-details", "/projects", "/projects-carousel", "/project-details", "/testimonials", "/pricing", "/testimonials-carousel", "/pricing-carousel", "/gallery", "/faq"]) ? 'current' : ''}`}>
-                                        <a href="#">Pages</a>
+                                        <Link href="#">Pages</Link>
                                         <ul className="shadow-box">
                                             <li>
                                                 <Link href="/team">Team</Link>
@@ -296,9 +296,9 @@ const StickyNavInner = () => {
                                     </Link>
                                 </div>
                                 <div className="main-menu-three__nav-sidebar-icon">
-                                    <a className="navSidebar-button" href="#" onClick={() => setSideBar(pre => !pre)}>
+                                    <Link className="navSidebar-button" href="#" onClick={() => setSideBar(pre => !pre)}>
                                         <span className="icon-app"></span>
-                                    </a>
+                                    </Link>
                                 </div>
                             </div>
                         </div>

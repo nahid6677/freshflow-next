@@ -46,12 +46,12 @@ const MobileNav: React.FC = () => {
                 <div className="mobile-nav__container">
                     <ul className="main-menu__list">
                         <li className="dropdown megamenu current">
-                            <a className={`${isHomeOpen ? 'expanded' : ''} `}>
+                            <Link href="#" className={`${isHomeOpen ? 'expanded' : ''} `}>
                                 Home
                                 <button onClick={() => setIsHomeOpen(!isHomeOpen)} type="button" className={`${isHomeOpen ? 'expanded' : ''}  `}>
                                     <i className='fa fa-angle-down '></i>
                                 </button>
-                            </a>
+                            </Link>
                             <ul style={{ display: `${isHomeOpen ? 'block' : 'none'}` }}>
                                 <li>
                                     <section className="home-showcase">
@@ -133,12 +133,12 @@ const MobileNav: React.FC = () => {
                             <Link href="/about" onClick={handleLinkClick}>About</Link>
                         </li>
                         <li className="dropdown">
-                            <a className={`${isPageOpen ? 'expanded' : ''}`}>
+                            <Link href="#" className={`${isPageOpen ? 'expanded' : ''}`}>
                                 Pages
                                 <button onClick={() => setIsPagesOpen(!isPageOpen)} type="button" className={`${isPageOpen ? 'expanded' : ''}`}>
                                     <i className='fa fa-angle-down '></i>
                                 </button>
-                            </a>
+                            </Link>
                             <ul style={{ display: `${isPageOpen ? 'block' : 'none'}` }}>
                                 <li>
                                     <Link href="/team" onClick={handleLinkClick}>Team</Link>
@@ -182,12 +182,12 @@ const MobileNav: React.FC = () => {
                             </ul>
                         </li>
                         <li className='dropdown'>
-                            <a className={`${isServicesOpen ? 'expanded' : ''}`}>
+                            <Link href="#" className={`${isServicesOpen ? 'expanded' : ''}`}>
                                 Services
                                 <button onClick={() => setIsServicesOpen(!isServicesOpen)} type="button" className={`${isServicesOpen ? 'expanded' : ''}`}>
                                     <i className='fa fa-angle-down '></i>
                                 </button>
-                            </a>
+                            </Link>
                             <ul style={{ display: `${isServicesOpen ? 'block' : 'none'}` }}>
                                 <li>
                                     <Link href="/services" onClick={handleLinkClick}>Services</Link>
@@ -210,20 +210,20 @@ const MobileNav: React.FC = () => {
                             </ul>
                         </li>
                         <li className="dropdown">
-                            <a className={`${isShopOpen ? 'expanded' : ''}`}>
+                            <Link href="#" className={`${isShopOpen ? 'expanded' : ''}`}>
                                 Shop
                                 <button onClick={() => setIsShopOpen(!isShopOpen)} type="button" className={`${isShopOpen ? 'expanded' : ''}`}>
                                     <i className='fa fa-angle-down '></i>
                                 </button>
-                            </a>
+                            </Link>
                             <ul style={{ display: `${isShopOpen ? 'block' : 'none'}` }}>
                                 <li>
-                                    <a className={`${product ? 'expanded' : ''}`}>
+                                    <Link href="#" className={`${product ? 'expanded' : ''}`}>
                                         Products
                                         <button onClick={() => setProducts((pre => !pre))} className={`${product ? 'expanded' : ''}`}>
                                             <i className='fa fa-angle-down '></i>
                                         </button>
-                                    </a>
+                                    </Link>
                                     <ul style={{ display: `${product ? 'block' : 'none'}` }}>
                                         <li>
                                             <Link href="/products-left" onClick={handleLinkClick}>Left Sidebar</Link>
@@ -257,12 +257,12 @@ const MobileNav: React.FC = () => {
                             </ul>
                         </li>
                         <li className="dropdown">
-                            <a className={`${isBlogOpen ? 'expanded' : ''}`}>
+                            <Link href={"#"} className={`${isBlogOpen ? 'expanded' : ''}`}>
                                 Blog
                                 <button onClick={() => setIsBlogOpen(!isBlogOpen)} type="button" className={`${isBlogOpen ? 'expanded' : ''}`}>
                                     <i className='fa fa-angle-down '></i>
                                 </button>
-                            </a>
+                            </Link>
                             <ul style={{ display: `${isBlogOpen ? 'block' : 'none'}` }}>
                                 <li>
                                     <Link href="/blog" onClick={handleLinkClick}>Blog</Link>
@@ -289,21 +289,21 @@ const MobileNav: React.FC = () => {
                 <ul className="mobile-nav__contact list-unstyled">
                     <li>
                         <i className="fa fa-envelope"></i>
-                        <a href="mailto:needhelp@Freshflow.com">
+                        <Link href="mailto:needhelp@Freshflow.com">
                             needhelp@Freshflow.com
-                        </a>
+                        </Link>
                     </li>
                     <li>
                         <i className="fas fa-phone"></i>
-                        <a href="tel:666-888-0000">666 888 0000</a>
+                        <Link href="tel:666-888-0000">666 888 0000</Link>
                     </li>
                 </ul>
                 <div className="mobile-nav__top">
                     <div className="mobile-nav__social">
-                        <a href="#" className="fab fa-twitter"></a>
-                        <a href="#" className="fab fa-facebook-square"></a>
-                        <a href="#" className="fab fa-pinterest-p"></a>
-                        <a href="#" className="fab fa-instagram"></a>
+                        <Link href="#" className="fab fa-twitter"></Link>
+                        <Link href="#" className="fab fa-facebook-square"></Link>
+                        <Link href="#" className="fab fa-pinterest-p"></Link>
+                        <Link href="#" className="fab fa-instagram"></Link>
                     </div>
                 </div>
             </div>

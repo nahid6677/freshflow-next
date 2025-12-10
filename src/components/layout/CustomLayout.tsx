@@ -13,7 +13,7 @@ const CustomLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => 
     const context = useContext(FreshFlowContext);
     if (!context) throw new Error('context is null!')
     const { isMobileOpen, isSearch } = context;
-    const pathName = usePathname(); 
+    const pathName = usePathname();
     return (
         <div className={`custom-cursor ${isMobileOpen ? "locked" : ""} ${isSearch ? "search-active" : ""}`}>
             <CustomCursor />

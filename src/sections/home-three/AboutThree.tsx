@@ -116,7 +116,7 @@ const AboutThree: React.FC = () => {
                                         </div>
                                         <div className="about-two__contact-content">
                                             <p>10:00 AM - 8:00 PM</p>
-                                            <h4><a href="tel:120045678910">12 (00) 456 78910</a></h4>
+                                            <h4><Link href="tel:120045678910">12 (00) 456 78910</Link></h4>
                                         </div>
                                     </div>
                                 </div>

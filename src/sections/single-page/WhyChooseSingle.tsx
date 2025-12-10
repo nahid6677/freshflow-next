@@ -100,7 +100,7 @@ const WhyChooseSingle: React.FC = () => {
                                                 <Image src={whych4} alt="" />
                                             </div>
                                             <div className="why-choose-one__video-link">
-                                                <a
+                                                <Link
                                                     href='#'
                                                     onClick={(e) =>
                                                         handleVideoClick(
@@ -114,7 +114,7 @@ const WhyChooseSingle: React.FC = () => {
                                                         <span className="icon-play"></span>
                                                         <i className="ripple"></i>
                                                     </div>
-                                                </a>
+                                                </Link>
                                             </div>
                                         </div>
                                     </div>
@@ -184,9 +184,9 @@ const WhyChooseSingle: React.FC = () => {
                                         </div>
                                     </div>
                                     <div className="why-choose-one__client-arrow">
-                                        <a href="#">
+                                        <Link href="#">
                                             <span className="icon-diagonal-arrow"></span>
-                                        </a>
+                                        </Link>
                                     </div>
                                 </div>
                                 <div className="why-choose-one__right-bottom">
@@ -283,7 +283,7 @@ const WhyChooseSingle: React.FC = () => {
                                         <div className="why-choose-one__content">
                                             <p>Sun - Fri & 10:00 AM - 8:00 PM</p>
                                             <h4>
-                                                <a href="#" onClick={handlePhone}>12 (00) 456 78910</a>
+                                                <Link href="#" onClick={handlePhone}>12 (00) 456 78910</Link>
                                             </h4>
                                         </div>
                                     </div>

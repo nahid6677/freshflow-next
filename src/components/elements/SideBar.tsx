@@ -44,7 +44,7 @@ const SideBar: React.FC = () => {
             <div className="xs-sidebar-widget">
                 <div className="sidebar-widget-container">
                     <div onClick={() => setSideBar(prev => !prev)} className="widget-heading">
-                        <a href="#" className="close-side-widget">X</a>
+                        <Link href="#" className="close-side-widget">X</Link>
                     </div>
                     <div className="sidebar-textwidget">
                         <div className="sidebar-info-contents">

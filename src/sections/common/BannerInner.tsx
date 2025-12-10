@@ -91,18 +91,18 @@ const BannerInner: React.FC<BannerOneProps> = ({
                             <div className="main-menu-three__top-social-box">
                                 <h4 className="main-menu-three__top-social-title">Follow Us</h4>
                                 <div className="main-menu-three__top-social">
-                                    <a href="#" aria-label="Facebook">
+                                    <Link href="#" aria-label="Facebook">
                                         <span className="icon-facebook-app-symbol"></span>
-                                    </a>
-                                    <a href="#" aria-label="Pinterest">
+                                    </Link>
+                                    <Link href="#" aria-label="Pinterest">
                                         <span className="icon-pinterest"></span>
-                                    </a>
-                                    <a href="#" aria-label="LinkedIn">
+                                    </Link>
+                                    <Link href="#" aria-label="LinkedIn">
                                         <span className="icon-linkedin-big-logo"></span>
-                                    </a>
-                                    <a href="#" aria-label="Instagram">
+                                    </Link>
+                                    <Link href="#" aria-label="Instagram">
                                         <span className="icon-instagram"></span>
-                                    </a>
+                                    </Link>
                                 </div>
                             </div>
                         </div>
@@ -122,14 +122,14 @@ const BannerInner: React.FC<BannerOneProps> = ({
                                 </div>
 
                                 <div className="main-menu-three__main-menu-box">
-                                    <a
+                                    <Link
                                         href="#"
                                         onClick={handleMobileToggle}
                                         className="mobile-nav__toggler"
                                         aria-label="Toggle mobile menu"
                                     >
                                         <i className="fa fa-bars"></i>
-                                    </a>
+                                    </Link>
 
                                     <ul className="main-menu__list">
                                         <li className="dropdown megamenu">
@@ -212,7 +212,7 @@ const BannerInner: React.FC<BannerOneProps> = ({
                                         </li>
 
                                         <li className={`dropdown ${isCurrent(['/team', '/team-details', '/projects', '/projects-carousel', '/project-details', '/testimonials', '/pricing', '/testimonials-carousel', '/pricing-carousel', '/gallery', '/faq']) ? 'current' : ''}`}>
-                                            <a href="#">Pages</a>
+                                            <Link href="#">Pages</Link>
                                             <ul className="shadow-box">
                                                 <li><Link href="/team">Team</Link></li>
                                                 <li><Link href="/team-details">Team Details</Link></li>
@@ -286,9 +286,9 @@ const BannerInner: React.FC<BannerOneProps> = ({
                                         </Link>
                                     </div>
                                     <div className="main-menu-three__nav-sidebar-icon">
-                                        <a onClick={handleSidebarToggle} className="navSidebar-button" href="#" aria-label="Toggle sidebar">
+                                        <Link onClick={handleSidebarToggle} className="navSidebar-button" href="#" aria-label="Toggle sidebar">
                                             <span className="icon-app"></span>
-                                        </a>
+                                        </Link>
                                     </div>
                                 </div>
                             </div>
@@ -300,10 +300,10 @@ const BannerInner: React.FC<BannerOneProps> = ({
             <section className="page-header">
                 <div className="page-header__bg"></div>
                 <div className="page-header__social">
-                    <a href="#">LinkedIn</a>
-                    <a href="#">Pinterest</a>
-                    <a href="#">twitter-x</a>
-                    <a href="#">facebook</a>
+                    <Link href="#">LinkedIn</Link>
+                    <Link href="#">Pinterest</Link>
+                    <Link href="#">twitter-x</Link>
+                    <Link href="#">facebook</Link>
                 </div>
                 <div className="container">
                     <div className="page-header__inner">

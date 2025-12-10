@@ -101,10 +101,10 @@ const TeamMenber: React.FC = () => {
                                                 <span className="icon-share"></span>
                                             </div>
                                             <div className="team-one__social">
-                                                <a href="#"><span className="icon-facebook-app-symbol"></span></a>
-                                                <a href="#"><span className="icon-pinterest"></span></a>
-                                                <a href="#"><span className="icon-linkedin-big-logo"></span></a>
-                                                <a href="#"><span className="icon-instagram"></span></a>
+                                                <Link href="#"><span className="icon-facebook-app-symbol"></span></Link>
+                                                <Link href="#"><span className="icon-pinterest"></span></Link>
+                                                <Link href="#"><span className="icon-linkedin-big-logo"></span></Link>
+                                                <Link href="#"><span className="icon-instagram"></span></Link>
                                             </div>
                                         </div>
                                     </div>

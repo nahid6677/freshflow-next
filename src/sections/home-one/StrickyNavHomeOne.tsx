@@ -129,7 +129,7 @@ const StrickyNavHomeOne: React.FC = () => {
                                         </Link>
                                     </li>
                                     <li className="dropdown">
-                                        <a href="#">Pages</a>
+                                        <Link href="#">Pages</Link>
                                         <ul className="shadow-box">
                                             <li><Link href={"/team"}>Team</Link></li>
                                             <li><Link href={"/team-details"}>Team Details</Link> </li>
@@ -194,10 +194,10 @@ const StrickyNavHomeOne: React.FC = () => {
                                 <div className="main-menu__search-cart-box">
                                     <div className="main-menu__search-box">
                                         {/* <Link href={"#"} className='main-menu__search searcher-toggler-box icon-search'></Link> */}
-                                        <a
+                                        <Link href="#"
                                             onClick={handleSearch}
                                             className="main-menu__search searcher-toggler-box icon-search"
-                                        ></a>
+                                        ></Link>
                                     </div>
                                     <div className="main-menu__cart">
                                         <Link href={"/cart"}>

@@ -5,7 +5,7 @@ import React from 'react';
 import { BlogHomeTow } from '@/types/home-tow';
 import TextAnimation from '@/components/elements/TextAnimation';
 import { motion } from "framer-motion"
-import { blogsHomeTow } from '../home-tow/contents';
+import { blogsHomeTow } from '../home-two/contents';
 const OurBlogThree: React.FC = () => {
     return (
         <section className="blog-two">

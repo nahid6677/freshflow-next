@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useCallback } from "react";
+import React, { useState, useCallback, useEffect } from "react";
 import type { FC, FormEvent, ChangeEvent } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion"
@@ -10,6 +10,7 @@ import contImg2 from "../../../public/assets/images/shapes/contact-one-shape-3.p
 import contImg3 from "../../../public/assets/images/resources/contact-one-img-main.jpg";
 import contImg4 from "../../../public/assets/images/resources/contact-one-small-img-1.jpg";
 import contImg5 from "../../../public/assets/images/resources/contact-one-small-img-2.jpg";
+import Link from "next/link";
 
 // Types
 interface ContactFormData {
@@ -75,6 +76,12 @@ const INITIAL_FORM_STATE: ContactFormData = {
 const ContactOne: React.FC = () => {
     const [formData, setFormData] = useState<ContactFormData>(INITIAL_FORM_STATE);
     const [isSubmitting, setIsSubmitting] = useState<boolean>(false);
+    const [isMounted, setIsMounted] = useState<boolean>(false);
+
+    // Fix hydration mismatch by only rendering form after mount
+    useEffect(() => {
+        setIsMounted(true);
+    }, []);
 
     const handleInputChange = useCallback(
         (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -95,13 +102,8 @@ const ContactOne: React.FC = () => {
                 await new Promise((resolve) => setTimeout(resolve, 1000));
 
                 // Reset form after successful submission
-                setFormData({
-                    name: "",
-                    email: "",
-                    phone: "",
-                    subject: "0",
-                    message: "",
-                });
+                setFormData(INITIAL_FORM_STATE);
+
                 const Swal = (await import('sweetalert2')).default;
                 Swal.fire({
                     position: "top-end",
@@ -113,12 +115,11 @@ const ContactOne: React.FC = () => {
             } catch (error) {
                 console.error("Form submission error:", error);
                 alert("Failed to send message. Please try again.");
-
             } finally {
                 setIsSubmitting(false);
             }
         },
-        [formData]
+        []
     );
 
     return (
@@ -143,7 +144,7 @@ const ContactOne: React.FC = () => {
 
             <div className="container">
                 <div className="row">
-                    < motion.div
+                    <motion.div
                         initial={{ x: -100, opacity: 0 }}
                         whileInView={{ x: 0, opacity: 1 }}
                         transition={{
@@ -151,7 +152,8 @@ const ContactOne: React.FC = () => {
                             ease: "easeOut"
                         }}
                         viewport={{ once: true, amount: 0.1 }}
-                        className="col-xl-6">
+                        className="col-xl-6"
+                    >
                         <ImageSection />
                     </motion.div>
 
@@ -160,12 +162,16 @@ const ContactOne: React.FC = () => {
                             <SectionTitle />
 
                             <div className="contact-one__inner">
-                                <ContactForm
-                                    formData={formData}
-                                    isSubmitting={isSubmitting}
-                                    onInputChange={handleInputChange}
-                                    onSubmit={handleSubmit}
-                                />
+                                {isMounted ? (
+                                    <ContactForm
+                                        formData={formData}
+                                        isSubmitting={isSubmitting}
+                                        onInputChange={handleInputChange}
+                                        onSubmit={handleSubmit}
+                                    />
+                                ) : (
+                                    <div style={{ minHeight: '400px' }} />
+                                )}
                             </div>
 
                             <ContactInfoSection contactInfo={CONTACT_INFO} />
@@ -252,10 +258,10 @@ const ContactForm: FC<ContactFormProps> = ({
     onInputChange,
     onSubmit,
 }) => (
-    <form className="contact-one__form" onSubmit={onSubmit}>
+    <form className="contact-one__form" onSubmit={onSubmit} suppressHydrationWarning>
         <div className="row">
             <div className="col-xl-6 col-lg-6 col-md-6">
-                <div className="contact-one__input-box">
+                <div className="contact-one__input-box" suppressHydrationWarning>
                     <input
                         type="text"
                         name="name"
@@ -265,12 +271,15 @@ const ContactForm: FC<ContactFormProps> = ({
                         required
                         disabled={isSubmitting}
                         aria-label="Name"
+                        autoComplete="name"
+                        data-lpignore="true"
+                        data-form-type="other"
                     />
                 </div>
             </div>
 
             <div className="col-xl-6 col-lg-6 col-md-6">
-                <div className="contact-one__input-box">
+                <div className="contact-one__input-box" suppressHydrationWarning>
                     <input
                         type="email"
                         name="email"
@@ -280,12 +289,15 @@ const ContactForm: FC<ContactFormProps> = ({
                         required
                         disabled={isSubmitting}
                         aria-label="Email"
+                        autoComplete="email"
+                        data-lpignore="true"
+                        data-form-type="other"
                     />
                 </div>
             </div>
 
             <div className="col-xl-6 col-lg-6 col-md-6">
-                <div className="contact-one__input-box">
+                <div className="contact-one__input-box" suppressHydrationWarning>
                     <input
                         type="text"
                         name="phone"
@@ -295,6 +307,9 @@ const ContactForm: FC<ContactFormProps> = ({
                         required
                         disabled={isSubmitting}
                         aria-label="Phone"
+                        autoComplete="tel"
+                        data-lpignore="true"
+                        data-form-type="other"
                     />
                 </div>
             </div>
@@ -322,7 +337,7 @@ const ContactForm: FC<ContactFormProps> = ({
             </div>
 
             <div className="col-xl-12">
-                <div className="contact-one__input-box text-message-box">
+                <div className="contact-one__input-box text-message-box" suppressHydrationWarning>
                     <textarea
                         name="message"
                         placeholder="Write your Message"
@@ -331,6 +346,8 @@ const ContactForm: FC<ContactFormProps> = ({
                         required
                         disabled={isSubmitting}
                         aria-label="Message"
+                        data-lpignore="true"
+                        data-form-type="other"
                     />
                 </div>
                 <div className="contact-one__btn-box">
@@ -361,7 +378,7 @@ const ContactInfoSection: FC<ContactInfoSectionProps> = ({ contactInfo }) => (
                     <div className="contact-one__call-contact">
                         <p>{info.label}</p>
                         <h4>
-                            <a href={info.link}>{info.title}</a>
+                            <Link href={info.link}>{info.title}</Link>
                         </h4>
                     </div>
                 </li>

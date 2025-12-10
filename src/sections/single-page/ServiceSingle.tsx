@@ -17,7 +17,7 @@ import TextAnimation from '@/components/elements/TextAnimation';
 
 const ServiceSingle: React.FC = () => {
     return (
-        <section className="services-one">
+        <section className="services-one" id="services">
             <div className="services-one__shape-bg"></div>
             <div className="services-one__shape-1"></div>
             <div className="services-one__shape-2"></div>

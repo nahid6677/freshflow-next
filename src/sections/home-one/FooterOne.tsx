@@ -84,7 +84,7 @@ const FooterOne: React.FC = () => {
                                                 </div>
                                                 <div className="site-footer__contact-info-content">
                                                     <p>Email Address:</p>
-                                                    <h5><a href="#" onClick={handleinfoDom}>info@domain.com</a></h5>
+                                                    <h5><Link href="#" onClick={handleinfoDom}>info@domain.com</Link></h5>
                                                 </div>
                                             </li>
                                             <li>
@@ -94,9 +94,9 @@ const FooterOne: React.FC = () => {
                                                 <div className="site-footer__contact-info-content">
                                                     <p>Phone Number:</p>
                                                     <h5>
-                                                        <a href="#" onClick={handlePhoneClick}>
+                                                        <Link href="#" onClick={handlePhoneClick}>
                                                             +92 ( 8800 ) - 6780
-                                                        </a>
+                                                        </Link>
                                                     </h5>
                                                 </div>
                                             </li>
@@ -105,10 +105,10 @@ const FooterOne: React.FC = () => {
                                     <div className="site-footer__social-box">
                                         <h4 className="site-footer__social-title">Follow Us</h4>
                                         <div className="site-footer__social">
-                                            <a href="#"><span className="icon-facebook-app-symbol"></span></a>
-                                            <a href="#"><span className="icon-pinterest"></span></a>
-                                            <a href="#"><span className="icon-linkedin-big-logo"></span></a>
-                                            <a href="#"><span className="icon-instagram"></span></a>
+                                            <Link href="#"><span className="icon-facebook-app-symbol"></span></Link>
+                                            <Link href="#"><span className="icon-pinterest"></span></Link>
+                                            <Link href="#"><span className="icon-linkedin-big-logo"></span></Link>
+                                            <Link href="#"><span className="icon-instagram"></span></Link>
                                         </div>
                                     </div>
                                 </div>

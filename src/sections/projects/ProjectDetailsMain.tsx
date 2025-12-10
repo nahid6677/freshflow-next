@@ -13,6 +13,7 @@ import projectDetailsNextImg from '../../../public/assets/images/project/project
 import React from 'react'
 import Image from 'next/image';
 import BeforeAfterSlider from '@/components/elements/BeforeAfterSlider';
+import Link from 'next/link';
 
 interface ProjectInfo {
     icon: string,
@@ -150,8 +151,8 @@ const ProjectDetailsMain: React.FC = () => {
                                 </div>
                                 <h3 className="project-details__get-touch-title">Feel free to reach out to us anytime.</h3>
                                 <div className="project-details__get-touch-btn-box">
-                                    <a href="#" className="thm-btn">Contact Us<span><i
-                                        className="icon-diagonal-arrow"></i></span></a>
+                                    <Link href="#" className="thm-btn">Contact Us<span><i
+                                        className="icon-diagonal-arrow"></i></span></Link>
                                 </div>
                                 <div className="project-details__call-box">
                                     <div className="project-details__call-icon">
@@ -159,7 +160,7 @@ const ProjectDetailsMain: React.FC = () => {
                                     </div>
                                     <div className="project-details__call-content">
                                         <p>Call Us To Take this services</p>
-                                        <a href="tel:12004567894">+12 (00) 456 7894</a>
+                                        <Link href="tel:12004567894">+12 (00) 456 7894</Link>
                                     </div>
                                 </div>
                             </div>
@@ -305,13 +306,13 @@ const ProjectDetailsMain: React.FC = () => {
                                             <Image src={projectDetailsPrevImg} alt="Previous project" />
                                         </div>
                                         <div className="content">
-                                            <p><a href="#">{projectData.navigation.prev.label}</a></p>
+                                            <p><Link href="#">{projectData.navigation.prev.label}</Link></p>
                                             <h5>{projectData.navigation.prev.title}</h5>
                                         </div>
                                     </div>
                                     <div className="project-details__next">
                                         <div className="content">
-                                            <p><a href="#">{projectData.navigation.next.label}</a></p>
+                                            <p><Link href="#">{projectData.navigation.next.label}</Link></p>
                                             <h5>{projectData.navigation.next.title}</h5>
                                         </div>
                                         <div className="project-details__next-img">

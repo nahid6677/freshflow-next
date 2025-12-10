@@ -3,6 +3,7 @@ import React from 'react';
 import contimg1 from "../../../public/assets/images/resources/contact-three-img-1.jpg";
 import Image from 'next/image';
 import { motion } from "framer-motion"
+import Link from 'next/link';
 const ContactThree: React.FC = () => {
     return (
         <section className="contact-three">
@@ -71,8 +72,8 @@ const ContactThree: React.FC = () => {
                                             <span className="icon-phone-call"></span>
                                         </div>
                                         <div className="text">
-                                            <p><a href="tel:12004578960">+12 (00) 457 8960</a></p>
-                                            <p><a href="tel:12004578970">+12 (00) 457 8970</a></p>
+                                            <p><Link href="tel:12004578960">+12 (00) 457 8960</Link></p>
+                                            <p><Link href="tel:12004578970">+12 (00) 457 8970</Link></p>
                                         </div>
                                     </li>
                                     <li>

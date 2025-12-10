@@ -8,6 +8,10 @@
     z-index: 1;
 }
 
+.newsletter-one__pdtop {
+    padding-top: 100px;
+}
+
 .newsletter-one .container {
     max-width: 1470px;
 }
